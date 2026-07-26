@@ -1,106 +1,193 @@
-<svg width="900" height="320" viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="terminal boot animation introducing Shashanth Netha">
+<svg width="920" height="360" viewBox="0 0 920 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SHASHANTH.OS Neural Engine Core and FUI Diagnostic Interface">
   <defs>
-    <clipPath id="cardClip">
-      <rect x="1" y="1" width="898" height="318" rx="14"/>
+    <!-- Card Clip Path -->
+    <clipPath id="heroClip">
+      <rect x="2" y="2" width="916" height="356" rx="14"/>
     </clipPath>
 
-    <!-- Typing animation clip path for 'whoami' -->
-    <clipPath id="typeClip">
-      <rect x="24" y="55" width="0" height="30">
-        <animate attributeName="width" from="0" to="110" dur="0.75s" begin="0.25s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1.0"/>
-      </rect>
-    </clipPath>
+    <!-- Glow & Pulse Filters -->
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="emeraldGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
+    <!-- Scanline Pattern -->
     <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" fill="#ffffff" opacity="0.02"/>
+      <rect width="4" height="1" fill="#ffffff" opacity="0.018"/>
     </pattern>
 
-    <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="85%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.2"/>
+    <!-- Radar Grid Pattern -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00f0ff" stroke-width="0.5" opacity="0.07"/>
+    </pattern>
+
+    <!-- Animated Linear Gradient for Meters -->
+    <linearGradient id="meterGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#00ff9d"/>
+      <stop offset="100%" stop-color="#ffb700"/>
     </linearGradient>
   </defs>
 
-  <g clip-path="url(#cardClip)">
-    <!-- Terminal Background Container -->
-    <rect x="1" y="1" width="898" height="318" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
+  <g clip-path="url(#heroClip)">
+    <!-- Base FUI Background -->
+    <rect x="2" y="2" width="916" height="356" rx="14" fill="#08090c" stroke="#1b222d" stroke-width="1.5"/>
 
-    <!-- Title Bar -->
-    <rect x="1" y="1" width="898" height="34" fill="#161b22"/>
-    <line x1="1" y1="35" x2="899" y2="35" stroke="#30363d" stroke-width="1"/>
+    <!-- Subtle Technical Grid Overlay -->
+    <rect x="2" y="2" width="916" height="356" fill="url(#grid)"/>
 
-    <!-- Window Buttons -->
-    <circle cx="24" cy="18" r="6" fill="#ff5f56"/>
-    <circle cx="44" cy="18" r="6" fill="#ffbd2e"/>
-    <circle cx="64" cy="18" r="6" fill="#27c93f"/>
+    <!-- Sci-Fi Corner Brackets -->
+    <path d="M 12 30 L 12 12 L 30 12" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+    <path d="M 908 30 L 908 12 L 890 12" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+    <path d="M 12 330 L 12 348 L 30 348" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+    <path d="M 908 330 L 908 348 L 890 348" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
 
-    <text x="450" y="22" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="12" fill="#8b949e">sha@macbook-m3 — zsh — 90x28</text>
+    <!-- Top FUI Status Header Bar -->
+    <rect x="2" y="2" width="916" height="36" fill="#0e131b"/>
+    <line x1="2" y1="38" x2="918" y2="38" stroke="#1b222d" stroke-width="1"/>
 
-    <!-- Terminal Body -->
-    <g font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="16">
+    <!-- Live Status LED Indicator -->
+    <circle cx="24" cy="20" r="4" fill="#00ff9d" filter="url(#emeraldGlow)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="36" y="24" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="700" fill="#00ff9d" letter-spacing="1">SYSTEM // SHASHANTH.OS v4.0</text>
 
-      <!-- Row 1: Typed prompt -->
-      <text x="30" y="74" fill="#6e7681">$</text>
-      <g clip-path="url(#typeClip)">
-        <text x="46" y="74" fill="#c9d1d9" font-weight="500">whoami</text>
+    <text x="460" y="24" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#525e6e" letter-spacing="1.5">COMPUTE: APPLE SILICON M3 · ARCH: AI / FULL-STACK</text>
+
+    <text x="896" y="24" text-anchor="end" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#00f0ff" opacity="0.9" letter-spacing="1">[ CORE_ONLINE ]</text>
+
+    <!-- LEFT SECTION: ROTATING NEURAL RADAR TELEMETRY -->
+    <g transform="translate(110, 198)">
+      <!-- Background Radar Target Rings -->
+      <circle cx="0" cy="0" r="85" fill="none" stroke="#1b222d" stroke-width="1" stroke-dasharray="4 4"/>
+      <circle cx="0" cy="0" r="65" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.2"/>
+      <circle cx="0" cy="0" r="45" fill="none" stroke="#00ff9d" stroke-width="1" opacity="0.25"/>
+
+      <!-- Crosshairs -->
+      <line x1="-95" y1="0" x2="95" y2="0" stroke="#1b222d" stroke-width="1"/>
+      <line x1="0" y1="-95" x2="0" y2="95" stroke="#1b222d" stroke-width="1"/>
+
+      <!-- Outer Spinning Telemetry Ring -->
+      <circle cx="0" cy="0" r="85" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="30 60 15 45" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="25s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Inner Spinning Counter-Ring -->
+      <circle cx="0" cy="0" r="65" fill="none" stroke="#00ff9d" stroke-width="1.5" stroke-dasharray="20 40 10 30" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="16s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Radar Sweep Beam -->
+      <g>
+        <path d="M 0 0 L 85 -20 A 85 85 0 0 0 0 -85 Z" fill="url(#meterGradient)" opacity="0.12"/>
+        <line x1="0" y1="0" x2="0" y2="-85" stroke="#00ff9d" stroke-width="1.5" filter="url(#emeraldGlow)"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/>
       </g>
 
-      <!-- Row 2: Identity output -->
-      <g opacity="0">
-        <animate attributeName="opacity" from="0" to="1" begin="1.1s" dur="0.3s" fill="freeze"/>
-        <animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="1.1s" dur="0.3s" fill="freeze"/>
-        <text x="30" y="105" fill="#3fb950" font-weight="700">shashanth netha</text>
-      </g>
+      <!-- Pulsing Central Neural Core -->
+      <circle cx="0" cy="0" r="10" fill="#00f0ff" filter="url(#cyanGlow)">
+        <animate attributeName="r" values="8;12;8" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="4" fill="#ffffff"/>
 
-      <!-- Row 3: Command about.log -->
-      <g opacity="0">
-        <animate attributeName="opacity" from="0" to="1" begin="1.5s" dur="0.3s" fill="freeze"/>
-        <animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="1.5s" dur="0.3s" fill="freeze"/>
-        <text x="30" y="136" fill="#6e7681">$ <tspan fill="#c9d1d9">cat about.log</tspan></text>
-      </g>
-
-      <!-- Row 4 -->
-      <g opacity="0">
-        <animate attributeName="opacity" from="0" to="1" begin="1.9s" dur="0.3s" fill="freeze"/>
-        <animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="1.9s" dur="0.3s" fill="freeze"/>
-        <text x="30" y="167" fill="#3fb950">&gt; <tspan fill="#c9d1d9">B.Tech AI &amp; ML — CMRCET, Hyderabad</tspan></text>
-      </g>
-
-      <!-- Row 5 -->
-      <g opacity="0">
-        <animate attributeName="opacity" from="0" to="1" begin="2.3s" dur="0.3s" fill="freeze"/>
-        <animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="2.3s" dur="0.3s" fill="freeze"/>
-        <text x="30" y="198" fill="#3fb950">&gt; <tspan fill="#c9d1d9">NxtWave CCBP 4.0 Fellow</tspan></text>
-      </g>
-
-      <!-- Row 6 -->
-      <g opacity="0">
-        <animate attributeName="opacity" from="0" to="1" begin="2.7s" dur="0.3s" fill="freeze"/>
-        <animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="2.7s" dur="0.3s" fill="freeze"/>
-        <text x="30" y="229" fill="#3fb950">&gt; <tspan fill="#d29922">★</tspan> <tspan fill="#c9d1d9">1st place — IIT Hyderabad Hackathon</tspan></text>
-      </g>
-
-      <!-- Row 7 -->
-      <g opacity="0">
-        <animate attributeName="opacity" from="0" to="1" begin="3.1s" dur="0.3s" fill="freeze"/>
-        <animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="3.1s" dur="0.3s" fill="freeze"/>
-        <text x="30" y="260" fill="#3fb950">&gt; <tspan fill="#c9d1d9">shipping AgriSense AI &amp; analytics_shorts on an M3</tspan></text>
-      </g>
-
-      <!-- Row 8: Closing prompt + blinking cursor -->
-      <g opacity="0">
-        <animate attributeName="opacity" from="0" to="1" begin="3.5s" dur="0.3s" fill="freeze"/>
-        <animateTransform attributeName="transform" type="translate" from="0 5" to="0 0" begin="3.5s" dur="0.3s" fill="freeze"/>
-        <text x="30" y="291" fill="#6e7681">$</text>
-        <rect x="46" y="276" width="9" height="18" rx="1" fill="#3fb950">
-          <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.4;0.5;0.9;1" dur="1.1s" begin="3.8s" repeatCount="indefinite"/>
-        </rect>
-      </g>
+      <!-- Telemetry Callout Labels -->
+      <text x="0" y="105" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" fill="#525e6e" letter-spacing="1">LATENCY: 0.35ms · M3_MPS</text>
     </g>
 
-    <!-- Subtle texture overlays -->
-    <rect x="1" y="35" width="898" height="284" fill="url(#scanlines)"/>
-    <rect x="1" y="1" width="898" height="318" fill="url(#vignette)"/>
+    <!-- RIGHT SECTION: SYSTEM DIAGNOSTICS & TELEMETRY METER BARS -->
+    <g transform="translate(240, 56)" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace">
+
+      <!-- Identity Header -->
+      <text x="0" y="22" font-size="20" font-weight="700" fill="#e6edf3" letter-spacing="0.5">Shashanth Netha <tspan font-size="12" font-weight="500" fill="#00f0ff">(@shashanthnetha)</tspan></text>
+      <text x="0" y="42" font-size="12" fill="#525e6e">Senior AI Engineer &amp; Systems Architect · CMRCET / NxtWave Fellow</text>
+
+      <!-- Section Divider -->
+      <line x1="0" y1="54" x2="650" y2="54" stroke="#1b222d" stroke-width="1"/>
+
+      <!-- Telemetry Bar 1: AI / ML Infrastructure -->
+      <g transform="translate(0, 68)">
+        <text x="0" y="12" font-size="11" font-weight="600" fill="#00f0ff" letter-spacing="0.5">AI / ML INFRASTRUCTURE</text>
+        <text x="210" y="12" font-size="10" fill="#525e6e">(Vision, RAG, Local PyTorch / M3 MPS)</text>
+        <text x="648" y="12" text-anchor="end" font-size="11" font-weight="700" fill="#00ff9d">98%</text>
+
+        <!-- Track & Animated Bar -->
+        <rect x="0" y="20" width="650" height="6" rx="3" fill="#0e131b" stroke="#1b222d" stroke-width="0.8"/>
+        <rect x="0" y="20" width="0" height="6" rx="3" fill="url(#meterGradient)" filter="url(#emeraldGlow)">
+          <animate attributeName="width" from="0" to="637" dur="1.2s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1.0"/>
+        </rect>
+      </g>
+
+      <!-- Telemetry Bar 2: Full-Stack Engineering -->
+      <g transform="translate(0, 114)">
+        <text x="0" y="12" font-size="11" font-weight="600" fill="#00f0ff" letter-spacing="0.5">FULL-STACK SYSTEMS</text>
+        <text x="210" y="12" font-size="10" fill="#525e6e">(Next.js 14, FastAPI, Firebase, PostgreSQL)</text>
+        <text x="648" y="12" text-anchor="end" font-size="11" font-weight="700" fill="#00ff9d">95%</text>
+
+        <rect x="0" y="20" width="650" height="6" rx="3" fill="#0e131b" stroke="#1b222d" stroke-width="0.8"/>
+        <rect x="0" y="20" width="0" height="6" rx="3" fill="url(#meterGradient)" filter="url(#emeraldGlow)">
+          <animate attributeName="width" from="0" to="617" dur="1.2s" begin="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1.0"/>
+        </rect>
+      </g>
+
+      <!-- Telemetry Bar 3: Automation & Graphics Engine -->
+      <g transform="translate(0, 160)">
+        <text x="0" y="12" font-size="11" font-weight="600" fill="#00f0ff" letter-spacing="0.5">PROCEDURAL ENGINE &amp; AUTOMATION</text>
+        <text x="270" y="12" font-size="10" fill="#525e6e">(analytics_shorts, n8n, launchd)</text>
+        <text x="648" y="12" text-anchor="end" font-size="11" font-weight="700" fill="#00ff9d">100%</text>
+
+        <rect x="0" y="20" width="650" height="6" rx="3" fill="#0e131b" stroke="#1b222d" stroke-width="0.8"/>
+        <rect x="0" y="20" width="0" height="6" rx="3" fill="url(#meterGradient)" filter="url(#emeraldGlow)">
+          <animate attributeName="width" from="0" to="650" dur="1.2s" begin="0.6s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1.0"/>
+        </rect>
+      </g>
+
+      <!-- Milestone Callouts Grid -->
+      <g transform="translate(0, 210)">
+        <!-- Milestone 1 -->
+        <g opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="1.0s" dur="0.4s" fill="freeze"/>
+          <rect x="0" y="0" width="315" height="38" rx="6" fill="#0e131b" stroke="#1b222d" stroke-width="1"/>
+          <text x="12" y="23" font-size="11" fill="#ffb700" font-weight="700">★ 1ST PLACE</text>
+          <text x="95" y="23" font-size="11" fill="#e6edf3">IIT Hyderabad Hackathon</text>
+        </g>
+
+        <!-- Milestone 2 -->
+        <g opacity="0">
+          <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.4s" fill="freeze"/>
+          <rect x="330" y="0" width="320" height="38" rx="6" fill="#0e131b" stroke="#1b222d" stroke-width="1"/>
+          <text x="342" y="23" font-size="11" fill="#00ff9d" font-weight="700">🚀 FLAGSHIP</text>
+          <text x="430" y="23" font-size="11" fill="#e6edf3">AgriSense AI &amp; analytics_shorts</text>
+        </g>
+      </g>
+
+      <!-- Live Command Prompt Bar -->
+      <g transform="translate(0, 264)" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" begin="1.5s" dur="0.4s" fill="freeze"/>
+        <text x="0" y="14" font-size="12" fill="#525e6e">$</text>
+        <text x="16" y="14" font-size="12" fill="#00f0ff" font-weight="600">active_mission:</text>
+        <text x="145" y="14" font-size="12" fill="#e6edf3">shipping local procedural engines on Apple Silicon M3</text>
+        
+        <!-- Blinking Terminal Cursor -->
+        <rect x="585" y="2" width="8" height="15" fill="#00ff9d" filter="url(#emeraldGlow)">
+          <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.4;0.5;0.9;1" dur="1s" begin="1.8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+    </g>
+
+    <!-- Scanline & Vignette Overlay -->
+    <rect x="2" y="38" width="916" height="320" fill="url(#scanlines)"/>
   </g>
 </svg>

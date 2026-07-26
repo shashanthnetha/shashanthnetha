@@ -1,71 +1,144 @@
-<svg width="900" height="428" viewBox="0 0 900 428" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="live GitHub profile dashboard for shashanthnetha">
+<svg width="920" height="360" viewBox="0 0 920 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SHASHANTH.OS FUI Mission Control Telemetry for shashanthnetha">
   <defs>
     <clipPath id="cardClip">
-      <rect x="1" y="1" width="898" height="426" rx="12"/>
+      <rect x="2" y="2" width="916" height="356" rx="14"/>
     </clipPath>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="emeraldGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
     <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" fill="#ffffff" opacity="0.02"/>
+      <rect width="4" height="1" fill="#ffffff" opacity="0.018"/>
+    </pattern>
+
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00f0ff" stroke-width="0.5" opacity="0.06"/>
     </pattern>
   </defs>
 
   <g clip-path="url(#cardClip)">
-    <!-- Terminal window container -->
-    <rect x="1" y="1" width="898" height="426" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <!-- Base FUI Frame -->
+    <rect x="2" y="2" width="916" height="356" rx="14" fill="#08090c" stroke="#1b222d" stroke-width="1.5"/>
+    <rect x="2" y="2" width="916" height="356" fill="url(#grid)"/>
 
-    <!-- Title bar -->
-    <rect x="1" y="1" width="898" height="34" fill="#161b22"/>
-    <line x1="1" y1="35" x2="899" y2="35" stroke="#30363d" stroke-width="1"/>
+    <!-- Sci-Fi Corner Brackets -->
+    <path d="M 12 28 L 12 12 L 28 12" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+    <path d="M 908 28 L 908 12 L 892 12" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+    <path d="M 12 332 L 12 348 L 28 348" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+    <path d="M 908 332 L 908 348 L 892 348" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
 
-    <!-- Window controls -->
-    <circle cx="22" cy="18" r="5.5" fill="#f85149"/>
-    <circle cx="40" cy="18" r="5.5" fill="#d29922"/>
-    <circle cx="58" cy="18" r="5.5" fill="#3fb950"/>
+    <!-- Header Diagnostic Bar -->
+    <rect x="2" y="2" width="916" height="36" fill="#0e131b"/>
+    <line x1="2" y1="38" x2="918" y2="38" stroke="#1b222d" stroke-width="1"/>
 
-    <!-- Header title -->
-    <text x="450" y="22" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="12" fill="#6e7681">shashanthnetha — neofetch --github — live</text>
+    <!-- Header Title & Telemetry Indicators -->
+    <circle cx="24" cy="20" r="4" fill="#00ff9d" filter="url(#emeraldGlow)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="36" y="24" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="700" fill="#00ff9d" letter-spacing="1">MISSION CONTROL TELEMETRY</text>
+    <text x="460" y="24" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#525e6e" letter-spacing="1.5">LIVE GRAPHQL TELEMETRY ENGINE · DAILY CRON</text>
+    <text x="896" y="24" text-anchor="end" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#00f0ff" letter-spacing="1">[SHASHANTHNETHA]</text>
 
-    <!-- Matrix Glyph -->
-    <rect x="57" y="84" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="76" y="84" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="95" y="84" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="114" y="84" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="133" y="84" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="38" y="103" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="152" y="103" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="38" y="122" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="38" y="141" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="57" y="160" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="76" y="160" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="95" y="160" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="114" y="160" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="133" y="160" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="152" y="179" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="152" y="198" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="38" y="217" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="152" y="217" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="57" y="236" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="76" y="236" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="95" y="236" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="114" y="236" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
-      <rect x="133" y="236" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+    <!-- LEFT MODULE: TELEMETRY RADAR & STATUS -->
+    <g transform="translate(100, 186)">
+      <!-- Target Lock Rings -->
+      <circle cx="0" cy="0" r="75" fill="none" stroke="#1b222d" stroke-width="1" stroke-dasharray="4 4"/>
+      <circle cx="0" cy="0" r="55" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.25"/>
 
-    <!-- Neofetch Key-Value Rows -->
-    <text x="220" y="74" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">user           </tspan><tspan fill="#c9d1d9">shashanthnetha (Pittala Shashanth)</tspan></text><text x="220" y="100" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">system         </tspan><tspan fill="#c9d1d9">macOS · Apple M3 · zsh</tspan></text><text x="220" y="126" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">member_since   </tspan><tspan fill="#c9d1d9">Jan 2025 (1 yr ago)</tspan></text><text x="220" y="152" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">network        </tspan><tspan fill="#c9d1d9">10 followers · 17 following</tspan></text><text x="220" y="178" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">repositories   </tspan><tspan fill="#c9d1d9">31 public · 50 ★ · 2 forks</tspan></text><text x="220" y="204" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">contributions  </tspan><tspan fill="#c9d1d9">syncing after first run...</tspan></text><text x="220" y="230" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">streak         </tspan><tspan fill="#c9d1d9">syncing after first run...</tspan></text><text x="220" y="256" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">activity       </tspan><tspan fill="#c9d1d9">active developer</tspan></text><text x="220" y="282" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">top_languages  </tspan><tspan fill="#c9d1d9">TypeScript, Python</tspan></text><text x="220" y="308" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">active_now     </tspan><tspan fill="#c9d1d9">shashanthnetha · &quot;syncing after first workflow run...&quot; · 1m ago</tspan></text><text x="220" y="334" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">last_updated   </tspan><tspan fill="#c9d1d9">2026-07-26 11:15 UTC</tspan></text>
+      <!-- Spinning Crosshairs -->
+      <circle cx="0" cy="0" r="75" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="25 50 10 35" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="55" fill="none" stroke="#00ff9d" stroke-width="1.5" stroke-dasharray="15 35 10 25" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="14s" repeatCount="indefinite"/>
+      </circle>
 
-    <!-- Color Swatches Bar -->
-    <rect x="220" y="370" width="16" height="16" rx="3" fill="#f85149"/><rect x="244" y="370" width="16" height="16" rx="3" fill="#3fb950"/><rect x="268" y="370" width="16" height="16" rx="3" fill="#d29922"/><rect x="292" y="370" width="16" height="16" rx="3" fill="#58a6ff"/><rect x="316" y="370" width="16" height="16" rx="3" fill="#bc8cff"/><rect x="340" y="370" width="16" height="16" rx="3" fill="#39c5cf"/><rect x="364" y="370" width="16" height="16" rx="3" fill="#f778ba"/><rect x="388" y="370" width="16" height="16" rx="3" fill="#c9d1d9"/>
+      <!-- Center Pulse Point -->
+      <circle cx="0" cy="0" r="8" fill="#00f0ff" filter="url(#cyanGlow)">
+        <animate attributeName="r" values="6;10;6" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="3" fill="#ffffff"/>
 
-    <!-- Footer caption -->
-    <text x="220" y="402" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#6e7681">regenerated daily via GitHub Actions · pure SVG + Python stdlib</text>
+      <!-- Status Text -->
+      <text x="0" y="95" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="700" fill="#00ff9d" letter-spacing="1">STATUS: ONLINE</text>
+      <text x="0" y="110" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" fill="#525e6e" letter-spacing="1">COMPUTE: APPLE M3</text>
+    </g>
+
+    <!-- RIGHT MODULE: 4 TACTICAL TELEMETRY PANELS (2x2 GRID) -->
+    <g transform="translate(215, 54)" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace">
+
+      <!-- Panel 1: Codebase Matrix -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="335" height="120" rx="8" fill="#0c1017" stroke="#1b222d" stroke-width="1"/>
+        <path d="M 8 0 L 85 0" stroke="#00f0ff" stroke-width="2"/>
+        <text x="14" y="24" font-size="11" font-weight="700" fill="#00f0ff" letter-spacing="1">01 // CODEBASE MATRIX</text>
+        
+        <text x="14" y="52" font-size="12" font-weight="600" fill="#e6edf3">31 Public Repos · 50 ★ · 2 Forks</text>
+        <text x="14" y="74" font-size="11" fill="#525e6e">Top Stack: <tspan fill="#ffb700" font-weight="600">TypeScript, Python</tspan></text>
+        <text x="14" y="96" font-size="10" fill="#00ff9d">✓ Synchronized via GitHub GraphQL</text>
+      </g>
+
+      <!-- Panel 2: Engineering Velocity -->
+      <g transform="translate(350, 0)">
+        <rect x="0" y="0" width="335" height="120" rx="8" fill="#0c1017" stroke="#1b222d" stroke-width="1"/>
+        <path d="M 8 0 L 105 0" stroke="#00ff9d" stroke-width="2"/>
+        <text x="14" y="24" font-size="11" font-weight="700" fill="#00ff9d" letter-spacing="1">02 // ENGINEERING VELOCITY</text>
+
+        <text x="14" y="52" font-size="12" font-weight="600" fill="#e6edf3">syncing live telemetry...</text>
+        <text x="14" y="74" font-size="11" fill="#525e6e">Streak: <tspan fill="#00ff9d" font-weight="600">syncing live telemetry...</tspan></text>
+        <text x="14" y="96" font-size="10" fill="#00f0ff">⚡ High Frequency Development</text>
+      </g>
+
+      <!-- Panel 3: Workflow Telemetry -->
+      <g transform="translate(0, 134)">
+        <rect x="0" y="0" width="335" height="120" rx="8" fill="#0c1017" stroke="#1b222d" stroke-width="1"/>
+        <path d="M 8 0 L 95 0" stroke="#ffb700" stroke-width="2"/>
+        <text x="14" y="24" font-size="11" font-weight="700" fill="#ffb700" letter-spacing="1">03 // WORKFLOW TELEMETRY</text>
+
+        <text x="14" y="52" font-size="12" font-weight="600" fill="#e6edf3">active open source author</text>
+        <text x="14" y="74" font-size="11" fill="#525e6e">Network: <tspan fill="#e6edf3">10 Followers · 17 Following</tspan></text>
+        <text x="14" y="96" font-size="10" fill="#ffb700">★ Active Open Source Contributor</text>
+      </g>
+
+      <!-- Panel 4: Active Mission -->
+      <g transform="translate(350, 134)">
+        <rect x="0" y="0" width="335" height="120" rx="8" fill="#0c1017" stroke="#1b222d" stroke-width="1"/>
+        <path d="M 8 0 L 115 0" stroke="#bc8cff" stroke-width="2"/>
+        <text x="14" y="24" font-size="11" font-weight="700" fill="#bc8cff" letter-spacing="1">04 // ACTIVE MISSION TELEMETRY</text>
+
+        <text x="14" y="52" font-size="12" font-weight="600" fill="#00f0ff">shashanthnetha · &quot;syncing mission workflow...&quot;</text>
+        <text x="14" y="74" font-size="11" fill="#525e6e">Last Commit Pushed: <tspan fill="#e6edf3">5m ago</tspan></text>
+        <text x="14" y="96" font-size="10" fill="#525e6e">Updated 2026-07-26 11:21 UTC</text>
+      </g>
+
+    </g>
+
+    <!-- BOTTOM SIGNAL MATRIX BAR -->
+    <g transform="translate(215, 322)">
+      <rect x="0" y="0" width="14" height="14" rx="3" fill="#ff5f56"/>
+      <rect x="20" y="0" width="14" height="14" rx="3" fill="#00ff9d" filter="url(#emeraldGlow)"/>
+      <rect x="40" y="0" width="14" height="14" rx="3" fill="#ffb700"/>
+      <rect x="60" y="0" width="14" height="14" rx="3" fill="#00f0ff" filter="url(#cyanGlow)"/>
+      <rect x="80" y="0" width="14" height="14" rx="3" fill="#bc8cff"/>
+      <rect x="100" y="0" width="14" height="14" rx="3" fill="#e6edf3"/>
+
+      <text x="130" y="11" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#525e6e">SHASHANTH.OS // SELF-HOSTED GRAPHQL TELEMETRY ENGINE · NO THIRD-PARTY SERVICES</text>
+    </g>
 
     <!-- Scanline overlay -->
-    <rect x="1" y="35" width="898" height="392" fill="url(#scanlines)"/>
+    <rect x="2" y="38" width="916" height="320" fill="url(#scanlines)"/>
   </g>
 </svg>

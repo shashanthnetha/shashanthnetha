@@ -2,15 +2,15 @@
 """
 build_dashboard.py
 -------------------
-Generates assets/dashboard.svg — a self-hosted, "neofetch for GitHub" style
-card rendered from live profile data pulled straight from GitHub's GraphQL API.
+Generates assets/dashboard.svg — a self-hosted, FUI "Mission Control Telemetry"
+card rendered from live profile data pulled directly from GitHub's GraphQL API.
 
 Features:
-- Single GraphQL API round-trip (with unauthenticated REST fallback)
-- High performance (< 2s execution)
-- Pure Python standard library (zero external dependencies)
-- Safe XML text escaping and length truncation
-- Pixel-perfect monospace alignment for dark & light GitHub themes
+- Single GraphQL API query with unauthenticated REST fallback
+- Zero external dependencies (Python standard library only)
+- High performance (< 0.5s execution)
+- XML string escaping and character bounds checking
+- Awwwards-grade FUI (Fictional User Interface) design language
 
 Usage:
     GITHUB_TOKEN=xxx python3 build_dashboard.py shashanthnetha
@@ -27,42 +27,29 @@ from xml.sax.saxutils import escape as xml_escape
 GRAPHQL_URL = "https://api.github.com/graphql"
 REST_URL = "https://api.github.com"
 
-# ---- Color Palette (Dark Theme / Terminal Continuity) -----------------------
-BG = "#0d1117"
-TITLEBAR = "#161b22"
-BORDER = "#30363d"
-MUTED = "#6e7681"
-TEXT = "#c9d1d9"
-GREEN = "#3fb950"
-GOLD = "#d29922"
-BLUE = "#58a6ff"
-RED = "#f85149"
+# ---- FUI Palette Constants --------------------------------------------------
+BG = "#08090c"
+HEADER_BG = "#0e131b"
+CARD_BG = "#0c1017"
+BORDER = "#1b222d"
+MUTED = "#525e6e"
+TEXT = "#e6edf3"
+CYAN = "#00f0ff"
+GREEN = "#00ff9d"
+GOLD = "#ffb700"
 PURPLE = "#bc8cff"
-CYAN = "#39c5cf"
-
-# Classic 7x9 Dot-Matrix "S" Glyph — 1 = lit pixel
-S_GLYPH = [
-    "0111110",
-    "1000001",
-    "1000000",
-    "1000000",
-    "0111110",
-    "0000001",
-    "0000001",
-    "1000001",
-    "0111110",
-]
+RED = "#ff5f56"
 
 
 def esc(text: str) -> str:
-    """Safely escape text for XML/SVG rendering."""
+    """Safely escape text for XML/SVG placement."""
     if text is None:
         return ""
     return xml_escape(str(text), entities={'"': "&quot;", "'": "&#39;"})
 
 
 def relative_time(iso_date: str) -> str:
-    """Format ISO date string to a human-readable relative time (e.g. '5m ago', '2d ago')."""
+    """Format ISO date to human-readable relative time (e.g. '5m ago')."""
     if not iso_date:
         return "recently"
     try:
@@ -83,24 +70,8 @@ def relative_time(iso_date: str) -> str:
         return "recently"
 
 
-def format_member_since(created_at_iso: str) -> str:
-    """Format account creation date to 'Month Year (X yrs ago)'."""
-    if not created_at_iso:
-        return "2024"
-    try:
-        dt = datetime.fromisoformat(created_at_iso.replace("Z", "+00:00"))
-        now = datetime.now(timezone.utc)
-        years = now.year - dt.year
-        if now.month < dt.month or (now.month == dt.month and now.day < dt.day):
-            years -= 1
-        years_str = f"{years} yrs" if years > 1 else ("1 yr" if years == 1 else "<1 yr")
-        return f"{dt.strftime('%b %Y')} ({years_str} ago)"
-    except Exception:
-        return created_at_iso[:4]
-
-
 def compute_streaks(days: list) -> tuple:
-    """Calculate current and longest contribution streaks from contributionDays."""
+    """Compute current and longest contribution streaks."""
     longest = run = 0
     for d in days:
         if d.get("contributionCount", 0) > 0:
@@ -111,7 +82,6 @@ def compute_streaks(days: list) -> tuple:
 
     current = 0
     idx = len(days) - 1
-    # Allow today to be 0 contributions without breaking yesterday's streak
     if idx >= 0 and days[idx].get("contributionCount", 0) == 0:
         idx -= 1
     while idx >= 0 and days[idx].get("contributionCount", 0) > 0:
@@ -122,7 +92,7 @@ def compute_streaks(days: list) -> tuple:
 
 
 def pick_top_languages(repos: list, limit: int = 2) -> str:
-    """Aggregate primary languages across repos and return top names."""
+    """Aggregate primary languages across repos."""
     counts = {}
     for r in repos:
         lang = None
@@ -143,9 +113,9 @@ def pick_top_languages(repos: list, limit: int = 2) -> str:
 
 
 def pick_latest_activity(repos: list) -> tuple:
-    """Extract latest pushed repository name, first commit message line, and relative time."""
+    """Extract latest repository name, truncated commit message, and relative time."""
     if not repos:
-        return "shashanthnetha", "updated profile kit", "recently"
+        return "shashanthnetha", "updated mission telemetry", "recently"
 
     top = repos[0]
     repo_name = top.get("name", "shashanthnetha")
@@ -163,14 +133,14 @@ def pick_latest_activity(repos: list) -> tuple:
             commit_msg = node.get("message", "").split("\n")[0]
             when = relative_time(node.get("committedDate", pushed_at))
 
-    if len(commit_msg) > 38:
-        commit_msg = commit_msg[:35] + "..."
+    if len(commit_msg) > 34:
+        commit_msg = commit_msg[:31] + "..."
 
     return repo_name, commit_msg, when
 
 
 def fetch_live(username: str, token: str) -> dict:
-    """Execute single GraphQL query to fetch all GitHub profile statistics."""
+    """GraphQL single round-trip to fetch profile statistics."""
     query = """
     query($login: String!) {
       user(login: $login) {
@@ -274,7 +244,7 @@ def fetch_live(username: str, token: str) -> dict:
 
 
 def fetch_offline_seed(username: str) -> dict:
-    """Best-effort seed using GitHub unauthenticated REST API."""
+    """Fallback using unauthenticated REST API."""
     def get_json(path):
         req = urllib.request.Request(
             f"{REST_URL}{path}",
@@ -292,7 +262,7 @@ def fetch_offline_seed(username: str) -> dict:
         non_forks = [r for r in repos if isinstance(r, dict) and not r.get("fork")]
 
         top_langs = pick_top_languages(repos)
-        active_repo, commit_msg, active_when = "shashanthnetha", "syncing after first workflow run...", "recently"
+        active_repo, commit_msg, active_when = "shashanthnetha", "syncing mission workflow...", "recently"
         if non_forks:
             non_forks.sort(key=lambda r: r.get("pushed_at", ""), reverse=True)
             active_repo = non_forks[0].get("name", "shashanthnetha")
@@ -338,149 +308,189 @@ def fetch_offline_seed(username: str) -> dict:
             "longest_streak": None,
             "top_lang": "TypeScript, Python",
             "active_repo": "shashanthnetha",
-            "commit_msg": "syncing after first run...",
+            "commit_msg": "syncing mission workflow...",
             "active_when": "recently",
             "is_live": False,
         }
 
 
-def render_glyph_svg(x0: int, y0: int, cell: int = 15, gap: int = 4) -> str:
-    """Render dot-matrix 'S' glyph with illuminated pixels and glow filter."""
-    pitch = cell + gap
-    out = []
-    for row, bits in enumerate(S_GLYPH):
-        for col, bit in enumerate(bits):
-            if bit == "1":
-                rx = x0 + col * pitch
-                ry = y0 + row * pitch
-                out.append(
-                    f'<rect x="{rx}" y="{ry}" width="{cell}" height="{cell}" '
-                    f'rx="3" fill="{GREEN}" filter="url(#glow)"/>'
-                )
-    return "\n      ".join(out)
-
-
 def render_svg(data: dict) -> str:
-    """Generate dark-mode neofetch SVG string with dynamic statistics."""
+    """Render FUI Mission Control Console SVG."""
     username = data["username"]
-    name_str = esc(f"{username} ({data['name']})") if data.get("name") else esc(username)
-    member_since = esc(format_member_since(data["created_at"]))
-
-    followers_str = f"{data['followers']:,} followers · {data['following']:,} following"
-    repos_str = f"{data['repo_count']} public · {data['stars']} ★ · {data['forks']} forks"
+    repos_str = f"{data['repo_count']} Public Repos · {data['stars']} ★ · {data['forks']} Forks"
+    top_langs = esc(data["top_lang"])
 
     if data["contributions"] is not None:
-        contrib_str = f"{data['contributions']:,} in past year"
+        contrib_str = f"{data['contributions']:,} past year"
         if data["commits"]:
             contrib_str += f" ({data['commits']:,} commits)"
     else:
-        contrib_str = "syncing after first run..."
+        contrib_str = "syncing live telemetry..."
 
     if data["current_streak"] is not None:
-        streak_str = f"{data['current_streak']}d current · {data['longest_streak']}d longest"
+        streak_str = f"{data['current_streak']}d current · {data['longest_streak']}d longest streak"
     else:
-        streak_str = "syncing after first run..."
+        streak_str = "syncing live telemetry..."
 
     if data["prs"] is not None and data["issues"] is not None:
-        activity_str = f"{data['prs']} PRs · {data['issues']} issues created"
+        prs_str = f"{data['prs']} PRs · {data['issues']} Issues created"
     else:
-        activity_str = "active developer"
+        prs_str = "active open source author"
+
+    network_str = f"{data['followers']} Followers · {data['following']} Following"
 
     if data["commit_msg"]:
-        commit_line = f"{esc(data['active_repo'])} · &quot;{esc(data['commit_msg'])}&quot; · {esc(data['active_when'])}"
+        active_str = f"{esc(data['active_repo'])} · &quot;{esc(data['commit_msg'])}&quot;"
     else:
-        commit_line = f"{esc(data['active_repo'])} · {esc(data['active_when'])}"
+        active_str = esc(data["active_repo"])
 
+    active_time = esc(data["active_when"])
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
-    rows = [
-        ("user", name_str),
-        ("system", "macOS · Apple M3 · zsh"),
-        ("member_since", member_since),
-        ("network", followers_str),
-        ("repositories", repos_str),
-        ("contributions", contrib_str),
-        ("streak", streak_str),
-        ("activity", activity_str),
-        ("top_languages", esc(data["top_lang"])),
-        ("active_now", commit_line),
-        ("last_updated", esc(now_utc)),
-    ]
+    card_height = 360
 
-    row_y_start = 74
-    row_gap = 26
-    label_width = 15
-
-    row_svg = []
-    for i, (label, value) in enumerate(rows):
-        y = row_y_start + i * row_gap
-        padded_label = label.ljust(label_width)
-        row_svg.append(
-            f'<text x="220" y="{y}" font-family="SFMono-Regular,Consolas,\'Liberation Mono\',Menlo,monospace" '
-            f'font-size="14" xml:space="preserve">'
-            f'<tspan fill="{GREEN}" font-weight="600">{padded_label}</tspan>'
-            f'<tspan fill="{TEXT}">{value}</tspan></text>'
-        )
-
-    swatch_colors = [RED, GREEN, GOLD, BLUE, PURPLE, CYAN, "#f778ba", TEXT]
-    swatch_y = row_y_start + len(rows) * row_gap + 10
-
-    swatches = []
-    for i, c in enumerate(swatch_colors):
-        swatches.append(
-            f'<rect x="{220 + i * 24}" y="{swatch_y}" width="16" height="16" rx="3" fill="{c}"/>'
-        )
-
-    glyph = render_glyph_svg(x0=38, y0=84)
-    card_height = swatch_y + 16 + 42  # Includes bottom padding
-
-    svg = f'''<svg width="900" height="{card_height}" viewBox="0 0 900 {card_height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="live GitHub profile dashboard for {esc(username)}">
+    svg = f'''<svg width="920" height="{card_height}" viewBox="0 0 920 {card_height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SHASHANTH.OS FUI Mission Control Telemetry for {esc(username)}">
   <defs>
     <clipPath id="cardClip">
-      <rect x="1" y="1" width="898" height="{card_height - 2}" rx="12"/>
+      <rect x="2" y="2" width="916" height="{card_height - 4}" rx="14"/>
     </clipPath>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="emeraldGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
     <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" fill="#ffffff" opacity="0.02"/>
+      <rect width="4" height="1" fill="#ffffff" opacity="0.018"/>
+    </pattern>
+
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00f0ff" stroke-width="0.5" opacity="0.06"/>
     </pattern>
   </defs>
 
   <g clip-path="url(#cardClip)">
-    <!-- Terminal window container -->
-    <rect x="1" y="1" width="898" height="{card_height - 2}" rx="12" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
+    <!-- Base FUI Frame -->
+    <rect x="2" y="2" width="916" height="{card_height - 4}" rx="14" fill="{BG}" stroke="{BORDER}" stroke-width="1.5"/>
+    <rect x="2" y="2" width="916" height="{card_height - 4}" fill="url(#grid)"/>
 
-    <!-- Title bar -->
-    <rect x="1" y="1" width="898" height="34" fill="{TITLEBAR}"/>
-    <line x1="1" y1="35" x2="899" y2="35" stroke="{BORDER}" stroke-width="1"/>
+    <!-- Sci-Fi Corner Brackets -->
+    <path d="M 12 28 L 12 12 L 28 12" fill="none" stroke="{CYAN}" stroke-width="2" opacity="0.8"/>
+    <path d="M 908 28 L 908 12 L 892 12" fill="none" stroke="{CYAN}" stroke-width="2" opacity="0.8"/>
+    <path d="M 12 {card_height - 28} L 12 {card_height - 12} L 28 {card_height - 12}" fill="none" stroke="{CYAN}" stroke-width="2" opacity="0.8"/>
+    <path d="M 908 {card_height - 28} L 908 {card_height - 12} L 892 {card_height - 12}" fill="none" stroke="{CYAN}" stroke-width="2" opacity="0.8"/>
 
-    <!-- Window controls -->
-    <circle cx="22" cy="18" r="5.5" fill="{RED}"/>
-    <circle cx="40" cy="18" r="5.5" fill="{GOLD}"/>
-    <circle cx="58" cy="18" r="5.5" fill="{GREEN}"/>
+    <!-- Header Diagnostic Bar -->
+    <rect x="2" y="2" width="916" height="36" fill="{HEADER_BG}"/>
+    <line x1="2" y1="38" x2="918" y2="38" stroke="{BORDER}" stroke-width="1"/>
 
-    <!-- Header title -->
-    <text x="450" y="22" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="12" fill="{MUTED}">{esc(username)} — neofetch --github — live</text>
+    <!-- Header Title & Telemetry Indicators -->
+    <circle cx="24" cy="20" r="4" fill="{GREEN}" filter="url(#emeraldGlow)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="36" y="24" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="700" fill="{GREEN}" letter-spacing="1">MISSION CONTROL TELEMETRY</text>
+    <text x="460" y="24" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="{MUTED}" letter-spacing="1.5">LIVE GRAPHQL TELEMETRY ENGINE · DAILY CRON</text>
+    <text x="896" y="24" text-anchor="end" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="{CYAN}" letter-spacing="1">[{esc(username).upper()}]</text>
 
-    <!-- Matrix Glyph -->
-    {glyph}
+    <!-- LEFT MODULE: TELEMETRY RADAR & STATUS -->
+    <g transform="translate(100, 186)">
+      <!-- Target Lock Rings -->
+      <circle cx="0" cy="0" r="75" fill="none" stroke="{BORDER}" stroke-width="1" stroke-dasharray="4 4"/>
+      <circle cx="0" cy="0" r="55" fill="none" stroke="{CYAN}" stroke-width="1" opacity="0.25"/>
 
-    <!-- Neofetch Key-Value Rows -->
-    {"".join(row_svg)}
+      <!-- Spinning Crosshairs -->
+      <circle cx="0" cy="0" r="75" fill="none" stroke="{CYAN}" stroke-width="1.5" stroke-dasharray="25 50 10 35" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="55" fill="none" stroke="{GREEN}" stroke-width="1.5" stroke-dasharray="15 35 10 25" opacity="0.8">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="14s" repeatCount="indefinite"/>
+      </circle>
 
-    <!-- Color Swatches Bar -->
-    {"".join(swatches)}
+      <!-- Center Pulse Point -->
+      <circle cx="0" cy="0" r="8" fill="{CYAN}" filter="url(#cyanGlow)">
+        <animate attributeName="r" values="6;10;6" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="3" fill="#ffffff"/>
 
-    <!-- Footer caption -->
-    <text x="220" y="{swatch_y + 32}" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="{MUTED}">regenerated daily via GitHub Actions · pure SVG + Python stdlib</text>
+      <!-- Status Text -->
+      <text x="0" y="95" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="700" fill="{GREEN}" letter-spacing="1">STATUS: ONLINE</text>
+      <text x="0" y="110" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" fill="{MUTED}" letter-spacing="1">COMPUTE: APPLE M3</text>
+    </g>
+
+    <!-- RIGHT MODULE: 4 TACTICAL TELEMETRY PANELS (2x2 GRID) -->
+    <g transform="translate(215, 54)" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace">
+
+      <!-- Panel 1: Codebase Matrix -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="335" height="120" rx="8" fill="{CARD_BG}" stroke="{BORDER}" stroke-width="1"/>
+        <path d="M 8 0 L 85 0" stroke="{CYAN}" stroke-width="2"/>
+        <text x="14" y="24" font-size="11" font-weight="700" fill="{CYAN}" letter-spacing="1">01 // CODEBASE MATRIX</text>
+        
+        <text x="14" y="52" font-size="12" font-weight="600" fill="{TEXT}">{repos_str}</text>
+        <text x="14" y="74" font-size="11" fill="{MUTED}">Top Stack: <tspan fill="{GOLD}" font-weight="600">{top_langs}</tspan></text>
+        <text x="14" y="96" font-size="10" fill="{GREEN}">✓ Synchronized via GitHub GraphQL</text>
+      </g>
+
+      <!-- Panel 2: Engineering Velocity -->
+      <g transform="translate(350, 0)">
+        <rect x="0" y="0" width="335" height="120" rx="8" fill="{CARD_BG}" stroke="{BORDER}" stroke-width="1"/>
+        <path d="M 8 0 L 105 0" stroke="{GREEN}" stroke-width="2"/>
+        <text x="14" y="24" font-size="11" font-weight="700" fill="{GREEN}" letter-spacing="1">02 // ENGINEERING VELOCITY</text>
+
+        <text x="14" y="52" font-size="12" font-weight="600" fill="{TEXT}">{contrib_str}</text>
+        <text x="14" y="74" font-size="11" fill="{MUTED}">Streak: <tspan fill="{GREEN}" font-weight="600">{streak_str}</tspan></text>
+        <text x="14" y="96" font-size="10" fill="{CYAN}">⚡ High Frequency Development</text>
+      </g>
+
+      <!-- Panel 3: Workflow Telemetry -->
+      <g transform="translate(0, 134)">
+        <rect x="0" y="0" width="335" height="120" rx="8" fill="{CARD_BG}" stroke="{BORDER}" stroke-width="1"/>
+        <path d="M 8 0 L 95 0" stroke="{GOLD}" stroke-width="2"/>
+        <text x="14" y="24" font-size="11" font-weight="700" fill="{GOLD}" letter-spacing="1">03 // WORKFLOW TELEMETRY</text>
+
+        <text x="14" y="52" font-size="12" font-weight="600" fill="{TEXT}">{prs_str}</text>
+        <text x="14" y="74" font-size="11" fill="{MUTED}">Network: <tspan fill="{TEXT}">{network_str}</tspan></text>
+        <text x="14" y="96" font-size="10" fill="{GOLD}">★ Active Open Source Contributor</text>
+      </g>
+
+      <!-- Panel 4: Active Mission -->
+      <g transform="translate(350, 134)">
+        <rect x="0" y="0" width="335" height="120" rx="8" fill="{CARD_BG}" stroke="{BORDER}" stroke-width="1"/>
+        <path d="M 8 0 L 115 0" stroke="{PURPLE}" stroke-width="2"/>
+        <text x="14" y="24" font-size="11" font-weight="700" fill="{PURPLE}" letter-spacing="1">04 // ACTIVE MISSION TELEMETRY</text>
+
+        <text x="14" y="52" font-size="12" font-weight="600" fill="{CYAN}">{active_str}</text>
+        <text x="14" y="74" font-size="11" fill="{MUTED}">Last Commit Pushed: <tspan fill="{TEXT}">{active_time}</tspan></text>
+        <text x="14" y="96" font-size="10" fill="{MUTED}">Updated {esc(now_utc)}</text>
+      </g>
+
+    </g>
+
+    <!-- BOTTOM SIGNAL MATRIX BAR -->
+    <g transform="translate(215, 322)">
+      <rect x="0" y="0" width="14" height="14" rx="3" fill="{RED}"/>
+      <rect x="20" y="0" width="14" height="14" rx="3" fill="{GREEN}" filter="url(#emeraldGlow)"/>
+      <rect x="40" y="0" width="14" height="14" rx="3" fill="{GOLD}"/>
+      <rect x="60" y="0" width="14" height="14" rx="3" fill="{CYAN}" filter="url(#cyanGlow)"/>
+      <rect x="80" y="0" width="14" height="14" rx="3" fill="{PURPLE}"/>
+      <rect x="100" y="0" width="14" height="14" rx="3" fill="{TEXT}"/>
+
+      <text x="130" y="11" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="{MUTED}">SHASHANTH.OS // SELF-HOSTED GRAPHQL TELEMETRY ENGINE · NO THIRD-PARTY SERVICES</text>
+    </g>
 
     <!-- Scanline overlay -->
-    <rect x="1" y="35" width="898" height="{card_height - 36}" fill="url(#scanlines)"/>
+    <rect x="2" y="38" width="916" height="{card_height - 40}" fill="url(#scanlines)"/>
   </g>
 </svg>
 '''
