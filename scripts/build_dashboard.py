@@ -250,9 +250,14 @@ def render_svg(d: dict) -> str:
             label = row[col_i * 2]
             value = row[col_i * 2 + 1]
             x = col_x[col_i]
+            # Text-heavy values (languages) get smaller font to prevent overflow
+            is_text = label == "LANGUAGES"
+            val_size = 14 if is_text else 22
+            val_font = mono if is_text else sans
+            val_y = y + 22 if is_text else y + 24
             rows_svg.append(
                 f'<text x="{x}" y="{y}" font-family="{mono}" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">{label}</text>'
-                f'<text x="{x}" y="{y + 24}" font-family="{sans}" font-size="22" font-weight="600" fill="#ededed">{value}</text>'
+                f'<text x="{x}" y="{val_y}" font-family="{val_font}" font-size="{val_size}" font-weight="600" fill="#ededed">{value}</text>'
             )
 
     # Active repo section
