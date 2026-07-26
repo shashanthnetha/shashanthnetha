@@ -6,9 +6,9 @@ on:
   workflow_dispatch:         # Manual trigger option in Actions tab
   push:
     branches: [main]
-    paths:
-      - "scripts/build_dashboard.py"
-      - ".github/workflows/dashboard.yml"
+    paths-ignore:
+      - "assets/dashboard.svg"
+      - "README.md"
 
 jobs:
   build:
