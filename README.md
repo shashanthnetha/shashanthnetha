@@ -1,120 +1,109 @@
 <div align="center">
 
-<!-- FUI NEURAL ENGINE CORE HERO -->
-<img src="assets/hero.svg" width="100%" alt="SHASHANTH.OS FUI Sci-Fi Neural Telemetry Core"/>
-
-<br/>
-
-<!-- NAVIGATION & LINKS -->
-<a href="https://portfolio-backend-lilac-mu.vercel.app/"><b>🌐 Portfolio</b></a> &nbsp;·&nbsp;
-<a href="https://linkedin.com/in/shashanth-pittala"><b>💼 LinkedIn</b></a> &nbsp;·&nbsp;
-<a href="https://github.com/shashanthnetha"><b>📦 Repositories</b></a>
+<img src="assets/hero.svg" width="100%" alt="FIG. 1 — System Architecture, Specification No. US-2026-SHA-M3"/>
 
 </div>
 
 <br/>
 
+## TITLE OF INVENTION
+
+**Local-First Multimodal AI Inference, Procedural Graphics Generation, and Autonomous Workflow Automation System Optimized for Apple Silicon Architecture**
+
+## INVENTOR
+
+**Shashanth Netha** (Pittala) — B.Tech AI & ML, CMRCET Hyderabad · NxtWave CCBP 4.0 Fellow
+
+## CROSS-REFERENCES
+
+**[Portfolio](https://portfolio-backend-lilac-mu.vercel.app/)** · **[LinkedIn](https://linkedin.com/in/shashanth-pittala)** · **[GitHub](https://github.com/shashanthnetha)**
+
+---
+
+## ABSTRACT
+
+A system and method for performing multimodal AI inference, procedural video generation, and end-to-end workflow automation on local Apple Silicon M3 hardware. The system comprises three primary modules:
+
+- **[10] AI / ML Inference Engine** — local PyTorch MPS inference, Gemini 2.0 Flash integration, ChromaDB vector retrieval, and OpenCV computer vision pipelines.
+- **[20] Procedural Graphics Engine** — deterministic video production using programmatic SVG/Canvas vector graphics with zero generative model dependencies.
+- **[30] Web & Automation Layer** — Next.js 14 / FastAPI application serving, Firebase backend services, and n8n workflow automation with macOS `launchd` scheduling.
+
+The described invention has been **reduced to practice** across multiple production deployments.
+
+<br/>
+
 <div align="center">
 
-<!-- FUI MISSION CONTROL TELEMETRY CONSOLE -->
-<img src="assets/dashboard.svg" width="100%" alt="SHASHANTH.OS Live Mission Control Telemetry Console"/>
+<img src="assets/dashboard.svg" width="100%" alt="FIG. 2 — Specification Claims with Live Telemetry"/>
 
 </div>
 
-<div align="center">
-<sub>handcrafted FUI SVG motion architecture · self-hosted Python GraphQL engine · regenerated daily via GitHub Actions</sub>
-</div>
-
-<br/>
+<sub align="center">FIG. 2 data is regenerated daily at 03:17 UTC by <code>scripts/build_dashboard.py</code> via GitHub Actions. The telemetry engine queries the GitHub GraphQL API using the built-in <code>GITHUB_TOKEN</code>. No third-party stat-card services are used.</sub>
 
 ---
 
-### ◈ SYSTEM ARCHITECTURE & CORE DIRECTIVE
+## DETAILED DESCRIPTION OF PREFERRED EMBODIMENTS
 
-> **"Build local-first. Compute on Apple Silicon before offloading to the cloud. Automate everything that repeats twice."**
+### Embodiment A — AgriSense AI
 
-I am an **AI/ML Engineer and Systems Developer** specializing in local multimodal pipelines, procedural graphics engines, and agentic environments. I build production software designed for raw performance, deterministic execution, and seamless user experiences.
+Multi-agent crop disease detection SaaS rebuilt from a hackathon prototype into a production-grade platform. The system uses Gemini 2.0 Flash Vision for multimodal image diagnosis, ChromaDB for retrieval-augmented disease lookup (50+ diseases indexed), gTTS for farmer-accessible audio output, and a Streamlit → Next.js/FastAPI migration path for the production frontend.
 
----
+### Embodiment B — analytics_shorts
 
-### ⚡ SHIPPED SYSTEMS & ARCHITECTURAL BREAKDOWNS
+High-throughput procedural YouTube Shorts video engine running entirely on local Apple Silicon M3. Replaces slow generative AI models with deterministic programmatic vector graphics. The pipeline includes YouTube analytics ingestion, competitor research integration, and daily execution via macOS `launchd` background scheduling.
 
-<details open>
-<summary><b>📦 Expand Flagship Systems & Benchmark Environments</b></summary>
-<br/>
+### Embodiment C — RumiCam
 
-#### 🚀 Flagship Applications
+Real-time computer vision surveillance and anomaly detection system. **Awarded 1st Place at the IIT Hyderabad Hackathon.** Demonstrates practical deployment of live video analysis with low-latency inference on constrained hardware.
 
-| System | Architecture & Engineering Highlights | Primary Stack |
-|---|---|---|
-| **AgriSense AI** | Multi-agent crop disease detection platform with multi-modal vision diagnosis, localized voice synthesis, and real-time mitigation workflows. | Gemini 2.0 Flash · ChromaDB · FastAPI · gTTS |
-| **analytics_shorts** | High-throughput procedural video production engine running locally on Apple Silicon M3. Replaced slow generative models with pure programmatic SVG/canvas vector graphics. | Python · Apple MPS · Launchd Scheduling |
-| **ShortsForge** | Automated short-form video generation pipeline with script-to-rendered asset compilation. | Python · Automation Pipeline |
+### Embodiment D — IntelliCredit
 
-<br/>
+Five-service AI credit appraisal pipeline developed for the IITH × Vivriti Capital challenge. Combines Gemini Vision document extraction, Random Forest risk scoring with SHAP explainability, and a multi-stage validation workflow for production credit decisioning.
 
-#### 🏆 Hackathons & Agentic Environments
+### Embodiment E — courtroom-env & smart-code-review-env
 
-| Project | Benchmark / Result | Highlights |
-|---|---|---|
-| **RumiCam** | 🥇 **1st Place**, IIT Hyderabad Hackathon | Real-time computer vision surveillance and anomaly scoring. |
-| **IntelliCredit** | IITH × Vivriti Capital Showcase | 5-service AI credit appraisal pipeline combining computer vision document extraction and Random Forest risk models with SHAP explainability. |
-| **courtroom-env** | **0.9667 Baseline** on OpenEnv | Specialized legal argumentation environment designed for multi-agent LLM reasoning. |
-| **smart-code-review-env** | OpenEnv Environment | Agentic code review sandbox for automated patch verification and lint enforcement. |
+Specialized agentic environments designed for the OpenEnv benchmark platform. `courtroom-env` implements a legal argumentation sandbox for multi-agent LLM reasoning, achieving a **0.9667 baseline accuracy**. `smart-code-review-env` provides automated patch verification for agentic code review systems.
 
-<br/>
+### Embodiment F — Automation Infrastructure
 
-#### 🔧 Systems, Hardware & Automation Tooling
+| System | Function |
+|---|---|
+| shorts-factory | Windows CUDA → Apple Silicon MPS port with `launchd` scheduling |
+| MetaAI-Video-Automator | Chrome extension + WebSocket bridge for headless video inference |
+| WhatsApp Lead Automation | n8n + Twilio event-driven client qualification and routing |
+| n8n Email Analyzer v3 | Gemini Flash document intelligence with Telegram alert dispatch |
 
-| System | Description | Technical Core |
-|---|---|---|
-| **shorts-factory** | Windows CUDA → Apple Silicon MPS port for local GPU acceleration and `launchd` background execution. | PyTorch · Metal Performance Shaders (MPS) |
-| **MetaAI-Video-Automator** | Headless WebSocket & Chrome extension bridge for automated video model inference. | Chrome Manifest V3 · WebSockets |
-| **WhatsApp Lead Engine** | Event-driven customer qualification and routing bot built for commercial interior design studios. | n8n · Twilio API · Webhooks |
-| **n8n Email Analyzer v3** | Real-time document parsing and instant alert dispatching system. | Gemini Flash · Google Sheets · Telegram |
+### Embodiment G — Machine Learning Research
 
-<br/>
-
-#### 🧠 Machine Learning & Computer Vision Research
-
-| Project | Key Metric / Capability | Architecture |
-|---|---|---|
-| **Human Activity Recognition** | **85.8% Accuracy** on surveillance streams | VGG16 + LSTM Sequence Modeling |
-| **Vision-LLM Pipeline** | Zero-cloud local object detection and VQA | DETR + Mistral on Apple M3 |
-| **AI Chess Agent** | Real-time board state visual perception & move generator | OpenCV + Gemini API |
-| **ESP32 WiFi CSI Sensing** | Device-free human motion and presence detection without cameras | Channel State Information (CSI) · Signal Processing |
-
-</details>
+| System | Result |
+|---|---|
+| Human Activity Recognition | 85.8% accuracy on surveillance video (VGG16 + LSTM) |
+| Vision-LLM Pipeline | Fully local DETR + Mistral VQA on Apple M3 |
+| AI Chess Agent | Real-time board state perception via OpenCV + Gemini API |
+| ESP32 WiFi CSI Sensing | Device-free human presence detection via channel state information |
 
 ---
 
-### 🛠️ TECHNICAL MATRIX
+## CLAIMS
 
-```
-┌──────────────────────────────┬──────────────────────────────┬──────────────────────────────┐
-│ 🤖 AI / ML INFRASTRUCTURE    │ 🌐 FULL-STACK SYSTEMS        │ ⚙️ AUTOMATION & SYSTEMS     │
-├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
-│ • PyTorch (MPS / Metal)      │ • Next.js 14 (App Router)    │ • macOS launchd Schedulers   │
-│ • Gemini 2.0 Flash / Vision  │ • FastAPI (Async Python)     │ • n8n Workflow Automation    │
-│ • ChromaDB Vector Database   │ • PostgreSQL & SQL Connect   │ • Docker & Containerization  │
-│ • OpenCV / DETR Vision       │ • Firebase Auth & Firestore  │ • Chrome Extensions (MV3)    │
-│ • LangChain & Agent SDKs     │ • Tailwind CSS & Design      │ • WebSockets & Real-time APIs│
-└──────────────────────────────┴──────────────────────────────┴──────────────────────────────┘
-```
+1. A system wherein all AI inference executes locally on Apple Silicon M3 via PyTorch MPS before any cloud offloading occurs.
+2. A procedural video generation method that produces broadcast-quality output using zero generative AI models.
+3. An automation architecture wherein any task repeated more than twice is converted to an n8n workflow or `launchd` background job.
+4. A self-hosted GitHub profile telemetry system that queries live data via GraphQL and renders patent-specification SVG without third-party services.
 
 ---
 
-### 🛰️ ACTIVE MISSIONS & TELEMETRY
+## CURRENT STATUS
 
-- [x] **analytics_shorts** — local procedural graphics engine running on M3
-- [x] YouTube analytics + competitor research pipeline integration
-- [x] Daily macOS `launchd` background scheduler setup
-- [ ] **shorts-factory port** — CUDA → Apple Silicon Metal Performance Shaders (MPS)
-- [ ] **shorts-factory port** — Windows Task Scheduler → macOS `launchd` conversion
-- [ ] **shorts-factory port** — Cross-platform font rendering path unification
+- [x] `analytics_shorts` — local procedural graphics engine operational
+- [x] YouTube analytics + competitor research integration
+- [x] Daily macOS `launchd` scheduler
+- [ ] `shorts-factory` — CUDA → MPS port in progress
+- [ ] `shorts-factory` — Task Scheduler → `launchd` conversion
+- [ ] `shorts-factory` — cross-platform font path unification
 
 ---
 
 <div align="center">
-<sub>SHASHANTH.OS · Engineered with precision for Apple Silicon M3 · malli kalustam 👋</sub>
+<sub>Specification No. US-2026-SHA-M3 · Filed January 2025 · Reduced to Practice</sub>
 </div>

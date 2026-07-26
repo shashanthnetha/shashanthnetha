@@ -1,144 +1,41 @@
-<svg width="920" height="360" viewBox="0 0 920 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SHASHANTH.OS FUI Mission Control Telemetry for shashanthnetha">
+<svg width="880" height="630" viewBox="0 0 880 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FIG. 2 — Live Specification Claims for shashanthnetha">
   <defs>
-    <clipPath id="cardClip">
-      <rect x="2" y="2" width="916" height="356" rx="14"/>
+    <clipPath id="sheet2">
+      <rect x="0" y="0" width="880" height="630" rx="2"/>
     </clipPath>
-
-    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <filter id="emeraldGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" fill="#ffffff" opacity="0.018"/>
-    </pattern>
-
-    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00f0ff" stroke-width="0.5" opacity="0.06"/>
+    <pattern id="bluegrid2" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#c8d8e8" stroke-width="0.4"/>
     </pattern>
   </defs>
 
-  <g clip-path="url(#cardClip)">
-    <!-- Base FUI Frame -->
-    <rect x="2" y="2" width="916" height="356" rx="14" fill="#08090c" stroke="#1b222d" stroke-width="1.5"/>
-    <rect x="2" y="2" width="916" height="356" fill="url(#grid)"/>
+  <g clip-path="url(#sheet2)">
+    <rect width="880" height="630" fill="#f5f2eb"/>
+    <rect width="880" height="630" fill="url(#bluegrid2)" opacity="0.35"/>
 
-    <!-- Sci-Fi Corner Brackets -->
-    <path d="M 12 28 L 12 12 L 28 12" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
-    <path d="M 908 28 L 908 12 L 892 12" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
-    <path d="M 12 332 L 12 348 L 28 348" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
-    <path d="M 908 332 L 908 348 L 892 348" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+    <!-- Outer drawing border -->
+    <rect x="40" y="20" width="800" height="590" fill="none" stroke="#2c3e50" stroke-width="1.2"/>
 
-    <!-- Header Diagnostic Bar -->
-    <rect x="2" y="2" width="916" height="36" fill="#0e131b"/>
-    <line x1="2" y1="38" x2="918" y2="38" stroke="#1b222d" stroke-width="1"/>
+    <!-- Figure heading -->
+    <text x="440" y="52" text-anchor="middle" font-family="'Times New Roman',Georgia,serif" font-size="14" font-weight="700" fill="#1a1a1a" letter-spacing="2">FIG. 2 — SPECIFICATION CLAIMS (LIVE TELEMETRY)</text>
+    <text x="440" y="70" text-anchor="middle" font-family="'Times New Roman',Georgia,serif" font-size="10" fill="#7a8a9a">Data sourced from GitHub GraphQL API · Automatically verified daily at 03:17 UTC</text>
 
-    <!-- Header Title & Telemetry Indicators -->
-    <circle cx="24" cy="20" r="4" fill="#00ff9d" filter="url(#emeraldGlow)">
-      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="36" y="24" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="700" fill="#00ff9d" letter-spacing="1">MISSION CONTROL TELEMETRY</text>
-    <text x="460" y="24" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#525e6e" letter-spacing="1.5">LIVE GRAPHQL TELEMETRY ENGINE · DAILY CRON</text>
-    <text x="896" y="24" text-anchor="end" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#00f0ff" letter-spacing="1">[SHASHANTHNETHA]</text>
+    <!-- Table column headers -->
+    <rect x="60" y="78" width="760" height="22" fill="#2c3e50"/>
+    <text x="74" y="94" font-family="'Times New Roman',Georgia,serif" font-size="10" font-weight="700" fill="#f5f2eb" letter-spacing="0.5">REF.</text>
+    <text x="130" y="94" font-family="'Times New Roman',Georgia,serif" font-size="10" font-weight="700" fill="#f5f2eb" letter-spacing="0.5">FIELD</text>
+    <text x="470" y="94" font-family="'Times New Roman',Georgia,serif" font-size="10" font-weight="700" fill="#f5f2eb" letter-spacing="0.5">VERIFIED VALUE</text>
 
-    <!-- LEFT MODULE: TELEMETRY RADAR & STATUS -->
-    <g transform="translate(100, 186)">
-      <!-- Target Lock Rings -->
-      <circle cx="0" cy="0" r="75" fill="none" stroke="#1b222d" stroke-width="1" stroke-dasharray="4 4"/>
-      <circle cx="0" cy="0" r="55" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.25"/>
+    <!-- Table outer border -->
+    <rect x="60" y="78" width="760" height="472" fill="none" stroke="#2c3e50" stroke-width="1"/>
 
-      <!-- Spinning Crosshairs -->
-      <circle cx="0" cy="0" r="75" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="25 50 10 35" opacity="0.7">
-        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="0" cy="0" r="55" fill="none" stroke="#00ff9d" stroke-width="1.5" stroke-dasharray="15 35 10 25" opacity="0.8">
-        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="14s" repeatCount="indefinite"/>
-      </circle>
+    <!-- Table data rows -->
+    <rect x="60" y="100" width="760" height="30" fill="#e8e4db"/><text x="74" y="120" font-family="'Times New Roman',Georgia,serif" font-size="11" font-weight="700" fill="#2c3e50" letter-spacing="1">CLAIM 1 — CODEBASE SCOPE</text><line x1="60" y1="130" x2="820" y2="130" stroke="#2c3e50" stroke-width="0.6"/><rect x="60" y="130" width="760" height="22" fill="#faf8f3"/><line x1="60" y1="152" x2="820" y2="152" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="146" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">1.1</text><text x="130" y="146" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Public Repositories</text><text x="470" y="146" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">31</text><rect x="60" y="152" width="760" height="22" fill="#f5f2eb"/><line x1="60" y1="174" x2="820" y2="174" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="168" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">1.2</text><text x="130" y="168" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Stars Received</text><text x="470" y="168" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">50</text><rect x="60" y="174" width="760" height="22" fill="#faf8f3"/><line x1="60" y1="196" x2="820" y2="196" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="190" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">1.3</text><text x="130" y="190" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Forks Created</text><text x="470" y="190" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">2</text><rect x="60" y="196" width="760" height="22" fill="#f5f2eb"/><line x1="60" y1="218" x2="820" y2="218" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="212" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">1.4</text><text x="130" y="212" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Primary Languages</text><text x="470" y="212" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">TypeScript, Python, JavaScript</text><rect x="60" y="218" width="760" height="30" fill="#e8e4db"/><text x="74" y="238" font-family="'Times New Roman',Georgia,serif" font-size="11" font-weight="700" fill="#2c3e50" letter-spacing="1">CLAIM 2 — DEVELOPMENT VELOCITY</text><line x1="60" y1="248" x2="820" y2="248" stroke="#2c3e50" stroke-width="0.6"/><rect x="60" y="248" width="760" height="22" fill="#faf8f3"/><line x1="60" y1="270" x2="820" y2="270" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="264" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">2.1</text><text x="130" y="264" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Contributions (Past Year)</text><text x="470" y="264" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">pending verification</text><rect x="60" y="270" width="760" height="22" fill="#f5f2eb"/><line x1="60" y1="292" x2="820" y2="292" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="286" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">2.2</text><text x="130" y="286" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Commits (Past Year)</text><text x="470" y="286" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">pending verification</text><rect x="60" y="292" width="760" height="22" fill="#faf8f3"/><line x1="60" y1="314" x2="820" y2="314" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="308" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">2.3</text><text x="130" y="308" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Current Streak</text><text x="470" y="308" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">pending verification</text><rect x="60" y="314" width="760" height="22" fill="#f5f2eb"/><line x1="60" y1="336" x2="820" y2="336" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="330" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">2.4</text><text x="130" y="330" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Longest Streak</text><text x="470" y="330" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">pending verification</text><rect x="60" y="336" width="760" height="30" fill="#e8e4db"/><text x="74" y="356" font-family="'Times New Roman',Georgia,serif" font-size="11" font-weight="700" fill="#2c3e50" letter-spacing="1">CLAIM 3 — OPEN SOURCE ACTIVITY</text><line x1="60" y1="366" x2="820" y2="366" stroke="#2c3e50" stroke-width="0.6"/><rect x="60" y="366" width="760" height="22" fill="#faf8f3"/><line x1="60" y1="388" x2="820" y2="388" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="382" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">3.1</text><text x="130" y="382" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Pull Requests Created</text><text x="470" y="382" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">pending verification</text><rect x="60" y="388" width="760" height="22" fill="#f5f2eb"/><line x1="60" y1="410" x2="820" y2="410" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="404" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">3.2</text><text x="130" y="404" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Issues Filed</text><text x="470" y="404" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">pending verification</text><rect x="60" y="410" width="760" height="22" fill="#faf8f3"/><line x1="60" y1="432" x2="820" y2="432" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="426" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">3.3</text><text x="130" y="426" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Followers</text><text x="470" y="426" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">10</text><rect x="60" y="432" width="760" height="22" fill="#f5f2eb"/><line x1="60" y1="454" x2="820" y2="454" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="448" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">3.4</text><text x="130" y="448" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Following</text><text x="470" y="448" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">17</text><rect x="60" y="454" width="760" height="30" fill="#e8e4db"/><text x="74" y="474" font-family="'Times New Roman',Georgia,serif" font-size="11" font-weight="700" fill="#2c3e50" letter-spacing="1">CLAIM 4 — CURRENT EMBODIMENT</text><line x1="60" y1="484" x2="820" y2="484" stroke="#2c3e50" stroke-width="0.6"/><rect x="60" y="484" width="760" height="22" fill="#faf8f3"/><line x1="60" y1="506" x2="820" y2="506" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="500" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">4.1</text><text x="130" y="500" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Active Repository</text><text x="470" y="500" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">shashanthnetha</text><rect x="60" y="506" width="760" height="22" fill="#f5f2eb"/><line x1="60" y1="528" x2="820" y2="528" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="522" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">4.2</text><text x="130" y="522" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Last Commit</text><text x="470" y="522" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">awaiting first workflow execution</text><rect x="60" y="528" width="760" height="22" fill="#faf8f3"/><line x1="60" y1="550" x2="820" y2="550" stroke="#d4d0c8" stroke-width="0.4"/><text x="74" y="544" font-family="'Courier New',monospace" font-size="10" fill="#7a8a9a">4.3</text><text x="130" y="544" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#2c3e50">Last Activity</text><text x="470" y="544" font-family="'Courier New',monospace" font-size="11" font-weight="600" fill="#1a1a1a">13m ago</text>
 
-      <!-- Center Pulse Point -->
-      <circle cx="0" cy="0" r="8" fill="#00f0ff" filter="url(#cyanGlow)">
-        <animate attributeName="r" values="6;10;6" dur="2.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+    <!-- Column separators -->
+    <line x1="120" y1="100" x2="120" y2="550" stroke="#c8c4bc" stroke-width="0.5"/><line x1="460" y1="100" x2="460" y2="550" stroke="#c8c4bc" stroke-width="0.5"/>
 
-      <!-- Status Text -->
-      <text x="0" y="95" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="700" fill="#00ff9d" letter-spacing="1">STATUS: ONLINE</text>
-      <text x="0" y="110" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" fill="#525e6e" letter-spacing="1">COMPUTE: APPLE M3</text>
-    </g>
-
-    <!-- RIGHT MODULE: 4 TACTICAL TELEMETRY PANELS (2x2 GRID) -->
-    <g transform="translate(215, 54)" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace">
-
-      <!-- Panel 1: Codebase Matrix -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="335" height="120" rx="8" fill="#0c1017" stroke="#1b222d" stroke-width="1"/>
-        <path d="M 8 0 L 85 0" stroke="#00f0ff" stroke-width="2"/>
-        <text x="14" y="24" font-size="11" font-weight="700" fill="#00f0ff" letter-spacing="1">01 // CODEBASE MATRIX</text>
-        
-        <text x="14" y="52" font-size="12" font-weight="600" fill="#e6edf3">31 Public Repos · 50 ★ · 2 Forks</text>
-        <text x="14" y="74" font-size="11" fill="#525e6e">Top Stack: <tspan fill="#ffb700" font-weight="600">TypeScript, Python</tspan></text>
-        <text x="14" y="96" font-size="10" fill="#00ff9d">✓ Synchronized via GitHub GraphQL</text>
-      </g>
-
-      <!-- Panel 2: Engineering Velocity -->
-      <g transform="translate(350, 0)">
-        <rect x="0" y="0" width="335" height="120" rx="8" fill="#0c1017" stroke="#1b222d" stroke-width="1"/>
-        <path d="M 8 0 L 105 0" stroke="#00ff9d" stroke-width="2"/>
-        <text x="14" y="24" font-size="11" font-weight="700" fill="#00ff9d" letter-spacing="1">02 // ENGINEERING VELOCITY</text>
-
-        <text x="14" y="52" font-size="12" font-weight="600" fill="#e6edf3">syncing live telemetry...</text>
-        <text x="14" y="74" font-size="11" fill="#525e6e">Streak: <tspan fill="#00ff9d" font-weight="600">syncing live telemetry...</tspan></text>
-        <text x="14" y="96" font-size="10" fill="#00f0ff">⚡ High Frequency Development</text>
-      </g>
-
-      <!-- Panel 3: Workflow Telemetry -->
-      <g transform="translate(0, 134)">
-        <rect x="0" y="0" width="335" height="120" rx="8" fill="#0c1017" stroke="#1b222d" stroke-width="1"/>
-        <path d="M 8 0 L 95 0" stroke="#ffb700" stroke-width="2"/>
-        <text x="14" y="24" font-size="11" font-weight="700" fill="#ffb700" letter-spacing="1">03 // WORKFLOW TELEMETRY</text>
-
-        <text x="14" y="52" font-size="12" font-weight="600" fill="#e6edf3">active open source author</text>
-        <text x="14" y="74" font-size="11" fill="#525e6e">Network: <tspan fill="#e6edf3">10 Followers · 17 Following</tspan></text>
-        <text x="14" y="96" font-size="10" fill="#ffb700">★ Active Open Source Contributor</text>
-      </g>
-
-      <!-- Panel 4: Active Mission -->
-      <g transform="translate(350, 134)">
-        <rect x="0" y="0" width="335" height="120" rx="8" fill="#0c1017" stroke="#1b222d" stroke-width="1"/>
-        <path d="M 8 0 L 115 0" stroke="#bc8cff" stroke-width="2"/>
-        <text x="14" y="24" font-size="11" font-weight="700" fill="#bc8cff" letter-spacing="1">04 // ACTIVE MISSION TELEMETRY</text>
-
-        <text x="14" y="52" font-size="12" font-weight="600" fill="#00f0ff">shashanthnetha · &quot;syncing mission workflow...&quot;</text>
-        <text x="14" y="74" font-size="11" fill="#525e6e">Last Commit Pushed: <tspan fill="#e6edf3">1m ago</tspan></text>
-        <text x="14" y="96" font-size="10" fill="#525e6e">Updated 2026-07-26 11:21 UTC</text>
-      </g>
-
-    </g>
-
-    <!-- BOTTOM SIGNAL MATRIX BAR -->
-    <g transform="translate(215, 322)">
-      <rect x="0" y="0" width="14" height="14" rx="3" fill="#ff5f56"/>
-      <rect x="20" y="0" width="14" height="14" rx="3" fill="#00ff9d" filter="url(#emeraldGlow)"/>
-      <rect x="40" y="0" width="14" height="14" rx="3" fill="#ffb700"/>
-      <rect x="60" y="0" width="14" height="14" rx="3" fill="#00f0ff" filter="url(#cyanGlow)"/>
-      <rect x="80" y="0" width="14" height="14" rx="3" fill="#bc8cff"/>
-      <rect x="100" y="0" width="14" height="14" rx="3" fill="#e6edf3"/>
-
-      <text x="130" y="11" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#525e6e">SHASHANTH.OS // SELF-HOSTED GRAPHQL TELEMETRY ENGINE · NO THIRD-PARTY SERVICES</text>
-    </g>
-
-    <!-- Scanline overlay -->
-    <rect x="2" y="38" width="916" height="320" fill="url(#scanlines)"/>
+    <!-- Footer -->
+    <text x="440" y="578" text-anchor="middle" font-family="'Times New Roman',Georgia,serif" font-size="10" fill="#7a8a9a">Specification No. US-2026-SHA-M3 · Sheet 2 of 2 · Last verified: 2026-07-26 11:35 UTC</text>
+    <text x="440" y="594" text-anchor="middle" font-family="'Times New Roman',Georgia,serif" font-size="9" fill="#a0a8b0">Self-hosted telemetry engine · github.com/shashanthnetha/shashanthnetha · No third-party services</text>
   </g>
 </svg>

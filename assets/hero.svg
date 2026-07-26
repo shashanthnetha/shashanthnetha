@@ -1,193 +1,122 @@
-<svg width="920" height="360" viewBox="0 0 920 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SHASHANTH.OS Neural Engine Core and FUI Diagnostic Interface">
+<svg width="880" height="520" viewBox="0 0 880 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Engineering Specification No. US-2026-SHA-M3: Local-First AI and Procedural Graphics System">
   <defs>
-    <!-- Card Clip Path -->
-    <clipPath id="heroClip">
-      <rect x="2" y="2" width="916" height="356" rx="14"/>
+    <clipPath id="sheet">
+      <rect x="0" y="0" width="880" height="520" rx="2"/>
     </clipPath>
-
-    <!-- Glow & Pulse Filters -->
-    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    
-    <filter id="emeraldGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Scanline Pattern -->
-    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" fill="#ffffff" opacity="0.018"/>
+    <pattern id="bluegrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#c8d8e8" stroke-width="0.4"/>
     </pattern>
-
-    <!-- Radar Grid Pattern -->
-    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00f0ff" stroke-width="0.5" opacity="0.07"/>
-    </pattern>
-
-    <!-- Animated Linear Gradient for Meters -->
-    <linearGradient id="meterGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff"/>
-      <stop offset="50%" stop-color="#00ff9d"/>
-      <stop offset="100%" stop-color="#ffb700"/>
-    </linearGradient>
   </defs>
 
-  <g clip-path="url(#heroClip)">
-    <!-- Base FUI Background -->
-    <rect x="2" y="2" width="916" height="356" rx="14" fill="#08090c" stroke="#1b222d" stroke-width="1.5"/>
+  <g clip-path="url(#sheet)">
+    <!-- Sheet background: warm engineering paper -->
+    <rect width="880" height="520" fill="#f5f2eb"/>
+    <rect width="880" height="520" fill="url(#bluegrid)" opacity="0.5"/>
 
-    <!-- Subtle Technical Grid Overlay -->
-    <rect x="2" y="2" width="916" height="356" fill="url(#grid)"/>
+    <!-- Outer drawing border (standard patent margin) -->
+    <rect x="40" y="40" width="800" height="440" fill="none" stroke="#2c3e50" stroke-width="1.5"/>
 
-    <!-- Sci-Fi Corner Brackets -->
-    <path d="M 12 30 L 12 12 L 30 12" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
-    <path d="M 908 30 L 908 12 L 890 12" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
-    <path d="M 12 330 L 12 348 L 30 348" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
-    <path d="M 908 330 L 908 348 L 890 348" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+    <!-- Title block (bottom-right, per patent drawing convention) -->
+    <rect x="520" y="400" width="320" height="80" fill="none" stroke="#2c3e50" stroke-width="1.2"/>
+    <line x1="520" y1="424" x2="840" y2="424" stroke="#2c3e50" stroke-width="0.8"/>
+    <line x1="520" y1="448" x2="840" y2="448" stroke="#2c3e50" stroke-width="0.8"/>
+    <line x1="520" y1="464" x2="840" y2="464" stroke="#2c3e50" stroke-width="0.8"/>
+    <line x1="680" y1="400" x2="680" y2="480" stroke="#2c3e50" stroke-width="0.8"/>
 
-    <!-- Top FUI Status Header Bar -->
-    <rect x="2" y="2" width="916" height="36" fill="#0e131b"/>
-    <line x1="2" y1="38" x2="918" y2="38" stroke="#1b222d" stroke-width="1"/>
+    <text x="536" y="416" font-family="'Times New Roman',Georgia,serif" font-size="10" fill="#2c3e50">INVENTOR</text>
+    <text x="696" y="416" font-family="'Times New Roman',Georgia,serif" font-size="10" fill="#2c3e50">SPECIFICATION NO.</text>
+    <text x="536" y="442" font-family="'Times New Roman',Georgia,serif" font-size="13" font-weight="700" fill="#1a1a1a">SHASHANTH NETHA</text>
+    <text x="696" y="442" font-family="'Times New Roman',Georgia,serif" font-size="13" font-weight="700" fill="#1a1a1a">US-2026-SHA-M3</text>
+    <text x="536" y="460" font-family="'Times New Roman',Georgia,serif" font-size="9" fill="#5a6a7a">CMRCET, Hyderabad · NxtWave CCBP 4.0</text>
+    <text x="696" y="460" font-family="'Times New Roman',Georgia,serif" font-size="9" fill="#5a6a7a">Filed: Jan 2025</text>
+    <text x="536" y="476" font-family="'Times New Roman',Georgia,serif" font-size="9" fill="#5a6a7a">Apple Silicon M3 · macOS · zsh</text>
+    <text x="696" y="476" font-family="'Times New Roman',Georgia,serif" font-size="9" fill="#5a6a7a">Sheet 1 of 2</text>
 
-    <!-- Live Status LED Indicator -->
-    <circle cx="24" cy="20" r="4" fill="#00ff9d" filter="url(#emeraldGlow)">
-      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="36" y="24" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="700" fill="#00ff9d" letter-spacing="1">SYSTEM // SHASHANTH.OS v4.0</text>
+    <!-- Figure label -->
+    <text x="440" y="72" text-anchor="middle" font-family="'Times New Roman',Georgia,serif" font-size="14" font-weight="700" fill="#1a1a1a" letter-spacing="2">FIG. 1 — SYSTEM ARCHITECTURE</text>
 
-    <text x="460" y="24" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#525e6e" letter-spacing="1.5">COMPUTE: APPLE SILICON M3 · ARCH: AI / FULL-STACK</text>
+    <!-- =========================================================== -->
+    <!-- SCHEMATIC: Three-module system architecture diagram           -->
+    <!-- Each module is a labeled box with leader callout numbers     -->
+    <!-- =========================================================== -->
 
-    <text x="896" y="24" text-anchor="end" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#00f0ff" opacity="0.9" letter-spacing="1">[ CORE_ONLINE ]</text>
+    <!-- Module [10]: AI / ML Inference Engine -->
+    <rect x="80" y="120" width="220" height="110" rx="3" fill="none" stroke="#2c3e50" stroke-width="1.2"/>
+    <text x="90" y="142" font-family="'Times New Roman',Georgia,serif" font-size="12" font-weight="700" fill="#1a1a1a">[10] AI / ML INFERENCE ENGINE</text>
+    <line x1="90" y1="148" x2="280" y2="148" stroke="#2c3e50" stroke-width="0.5"/>
+    <text x="90" y="166" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">PyTorch (MPS / Metal)</text>
+    <text x="90" y="182" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">Gemini 2.0 Flash / Vision</text>
+    <text x="90" y="198" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">ChromaDB · LangChain</text>
+    <text x="90" y="214" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">OpenCV · DETR · YOLO</text>
 
-    <!-- LEFT SECTION: ROTATING NEURAL RADAR TELEMETRY -->
-    <g transform="translate(110, 198)">
-      <!-- Background Radar Target Rings -->
-      <circle cx="0" cy="0" r="85" fill="none" stroke="#1b222d" stroke-width="1" stroke-dasharray="4 4"/>
-      <circle cx="0" cy="0" r="65" fill="none" stroke="#00f0ff" stroke-width="1" opacity="0.2"/>
-      <circle cx="0" cy="0" r="45" fill="none" stroke="#00ff9d" stroke-width="1" opacity="0.25"/>
+    <!-- Module [20]: Procedural Graphics Engine -->
+    <rect x="340" y="120" width="220" height="110" rx="3" fill="none" stroke="#2c3e50" stroke-width="1.2"/>
+    <text x="350" y="142" font-family="'Times New Roman',Georgia,serif" font-size="12" font-weight="700" fill="#1a1a1a">[20] PROCEDURAL GRAPHICS</text>
+    <line x1="350" y1="148" x2="540" y2="148" stroke="#2c3e50" stroke-width="0.5"/>
+    <text x="350" y="166" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">analytics_shorts engine</text>
+    <text x="350" y="182" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">SVG/Canvas vector pipeline</text>
+    <text x="350" y="198" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">Zero generative models</text>
+    <text x="350" y="214" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">macOS launchd scheduler</text>
 
-      <!-- Crosshairs -->
-      <line x1="-95" y1="0" x2="95" y2="0" stroke="#1b222d" stroke-width="1"/>
-      <line x1="0" y1="-95" x2="0" y2="95" stroke="#1b222d" stroke-width="1"/>
+    <!-- Module [30]: Full-Stack & Automation -->
+    <rect x="600" y="120" width="220" height="110" rx="3" fill="none" stroke="#2c3e50" stroke-width="1.2"/>
+    <text x="610" y="142" font-family="'Times New Roman',Georgia,serif" font-size="12" font-weight="700" fill="#1a1a1a">[30] WEB &amp; AUTOMATION</text>
+    <line x1="610" y1="148" x2="800" y2="148" stroke="#2c3e50" stroke-width="0.5"/>
+    <text x="610" y="166" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">Next.js 14 / FastAPI</text>
+    <text x="610" y="182" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">Firebase Auth &amp; Firestore</text>
+    <text x="610" y="198" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">n8n workflow automation</text>
+    <text x="610" y="214" font-family="'Courier New',monospace" font-size="10" fill="#3a4a5a">Docker · GitHub Actions</text>
 
-      <!-- Outer Spinning Telemetry Ring -->
-      <circle cx="0" cy="0" r="85" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="30 60 15 45" opacity="0.7">
-        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="25s" repeatCount="indefinite"/>
-      </circle>
+    <!-- Data flow arrows: [10] → [20] and [20] → [30] -->
+    <line x1="300" y1="175" x2="340" y2="175" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrow)"/>
+    <line x1="560" y1="175" x2="600" y2="175" stroke="#2c3e50" stroke-width="1" marker-end="url(#arrow)"/>
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-auto">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2c3e50"/>
+      </marker>
+    </defs>
 
-      <!-- Inner Spinning Counter-Ring -->
-      <circle cx="0" cy="0" r="65" fill="none" stroke="#00ff9d" stroke-width="1.5" stroke-dasharray="20 40 10 30" opacity="0.8">
-        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="16s" repeatCount="indefinite"/>
-      </circle>
+    <!-- Flow labels -->
+    <text x="320" y="168" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#7a8a9a">data</text>
+    <text x="580" y="168" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#7a8a9a">deploy</text>
 
-      <!-- Radar Sweep Beam -->
-      <g>
-        <path d="M 0 0 L 85 -20 A 85 85 0 0 0 0 -85 Z" fill="url(#meterGradient)" opacity="0.12"/>
-        <line x1="0" y1="0" x2="0" y2="-85" stroke="#00ff9d" stroke-width="1.5" filter="url(#emeraldGlow)"/>
-        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/>
-      </g>
+    <!-- =========================================================== -->
+    <!-- EMBODIMENTS (shipped systems with reference numbers)         -->
+    <!-- =========================================================== -->
 
-      <!-- Pulsing Central Neural Core -->
-      <circle cx="0" cy="0" r="10" fill="#00f0ff" filter="url(#cyanGlow)">
-        <animate attributeName="r" values="8;12;8" dur="3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="0" cy="0" r="4" fill="#ffffff"/>
+    <text x="440" y="270" text-anchor="middle" font-family="'Times New Roman',Georgia,serif" font-size="12" font-weight="700" fill="#1a1a1a" letter-spacing="1.5">DETAILED DESCRIPTION OF EMBODIMENTS</text>
 
-      <!-- Telemetry Callout Labels -->
-      <text x="0" y="105" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" fill="#525e6e" letter-spacing="1">LATENCY: 0.35ms · M3_MPS</text>
+    <!-- Embodiment A -->
+    <text x="80" y="298" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#1a1a1a"><tspan font-weight="700">A.</tspan> AgriSense AI — Multi-agent crop disease detection. Gemini Vision + ChromaDB + gTTS.</text>
+
+    <!-- Embodiment B -->
+    <text x="80" y="318" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#1a1a1a"><tspan font-weight="700">B.</tspan> analytics_shorts — Local procedural video engine. Zero generative models. Pure vector graphics.</text>
+
+    <!-- Embodiment C -->
+    <text x="80" y="338" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#1a1a1a"><tspan font-weight="700">C.</tspan> RumiCam — Real-time surveillance vision system. <tspan fill="#8b0000" font-weight="700">1st Place, IIT Hyderabad.</tspan></text>
+
+    <!-- Embodiment D -->
+    <text x="80" y="358" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#1a1a1a"><tspan font-weight="700">D.</tspan> IntelliCredit — 5-service AI credit appraisal. Random Forest + SHAP + Gemini Vision.</text>
+
+    <!-- Embodiment E -->
+    <text x="80" y="378" font-family="'Times New Roman',Georgia,serif" font-size="11" fill="#1a1a1a"><tspan font-weight="700">E.</tspan> courtroom-env — Legal argumentation environment for AI agents. 0.9667 baseline accuracy.</text>
+
+    <!-- Red "Reduced to Practice" stamp — animated fade-in -->
+    <g opacity="0" transform="translate(100, 388) rotate(-6)">
+      <animate attributeName="opacity" from="0" to="0.7" begin="1.2s" dur="0.5s" fill="freeze"/>
+      <rect x="0" y="0" width="240" height="36" rx="3" fill="none" stroke="#8b0000" stroke-width="2.5"/>
+      <text x="120" y="24" text-anchor="middle" font-family="'Times New Roman',Georgia,serif" font-size="14" font-weight="700" fill="#8b0000" letter-spacing="3">REDUCED TO PRACTICE</text>
     </g>
 
-    <!-- RIGHT SECTION: SYSTEM DIAGNOSTICS & TELEMETRY METER BARS -->
-    <g transform="translate(240, 56)" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace">
-
-      <!-- Identity Header -->
-      <text x="0" y="22" font-size="20" font-weight="700" fill="#e6edf3" letter-spacing="0.5">Shashanth Netha <tspan font-size="12" font-weight="500" fill="#00f0ff">(@shashanthnetha)</tspan></text>
-      <text x="0" y="42" font-size="12" fill="#525e6e">Senior AI Engineer &amp; Systems Architect · CMRCET / NxtWave Fellow</text>
-
-      <!-- Section Divider -->
-      <line x1="0" y1="54" x2="650" y2="54" stroke="#1b222d" stroke-width="1"/>
-
-      <!-- Telemetry Bar 1: AI / ML Infrastructure -->
-      <g transform="translate(0, 68)">
-        <text x="0" y="12" font-size="11" font-weight="600" fill="#00f0ff" letter-spacing="0.5">AI / ML INFRASTRUCTURE</text>
-        <text x="210" y="12" font-size="10" fill="#525e6e">(Vision, RAG, Local PyTorch / M3 MPS)</text>
-        <text x="648" y="12" text-anchor="end" font-size="11" font-weight="700" fill="#00ff9d">98%</text>
-
-        <!-- Track & Animated Bar -->
-        <rect x="0" y="20" width="650" height="6" rx="3" fill="#0e131b" stroke="#1b222d" stroke-width="0.8"/>
-        <rect x="0" y="20" width="0" height="6" rx="3" fill="url(#meterGradient)" filter="url(#emeraldGlow)">
-          <animate attributeName="width" from="0" to="637" dur="1.2s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1.0"/>
-        </rect>
-      </g>
-
-      <!-- Telemetry Bar 2: Full-Stack Engineering -->
-      <g transform="translate(0, 114)">
-        <text x="0" y="12" font-size="11" font-weight="600" fill="#00f0ff" letter-spacing="0.5">FULL-STACK SYSTEMS</text>
-        <text x="210" y="12" font-size="10" fill="#525e6e">(Next.js 14, FastAPI, Firebase, PostgreSQL)</text>
-        <text x="648" y="12" text-anchor="end" font-size="11" font-weight="700" fill="#00ff9d">95%</text>
-
-        <rect x="0" y="20" width="650" height="6" rx="3" fill="#0e131b" stroke="#1b222d" stroke-width="0.8"/>
-        <rect x="0" y="20" width="0" height="6" rx="3" fill="url(#meterGradient)" filter="url(#emeraldGlow)">
-          <animate attributeName="width" from="0" to="617" dur="1.2s" begin="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1.0"/>
-        </rect>
-      </g>
-
-      <!-- Telemetry Bar 3: Automation & Graphics Engine -->
-      <g transform="translate(0, 160)">
-        <text x="0" y="12" font-size="11" font-weight="600" fill="#00f0ff" letter-spacing="0.5">PROCEDURAL ENGINE &amp; AUTOMATION</text>
-        <text x="270" y="12" font-size="10" fill="#525e6e">(analytics_shorts, n8n, launchd)</text>
-        <text x="648" y="12" text-anchor="end" font-size="11" font-weight="700" fill="#00ff9d">100%</text>
-
-        <rect x="0" y="20" width="650" height="6" rx="3" fill="#0e131b" stroke="#1b222d" stroke-width="0.8"/>
-        <rect x="0" y="20" width="0" height="6" rx="3" fill="url(#meterGradient)" filter="url(#emeraldGlow)">
-          <animate attributeName="width" from="0" to="650" dur="1.2s" begin="0.6s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1.0"/>
-        </rect>
-      </g>
-
-      <!-- Milestone Callouts Grid -->
-      <g transform="translate(0, 210)">
-        <!-- Milestone 1 -->
-        <g opacity="0">
-          <animate attributeName="opacity" from="0" to="1" begin="1.0s" dur="0.4s" fill="freeze"/>
-          <rect x="0" y="0" width="315" height="38" rx="6" fill="#0e131b" stroke="#1b222d" stroke-width="1"/>
-          <text x="12" y="23" font-size="11" fill="#ffb700" font-weight="700">★ 1ST PLACE</text>
-          <text x="95" y="23" font-size="11" fill="#e6edf3">IIT Hyderabad Hackathon</text>
-        </g>
-
-        <!-- Milestone 2 -->
-        <g opacity="0">
-          <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.4s" fill="freeze"/>
-          <rect x="330" y="0" width="320" height="38" rx="6" fill="#0e131b" stroke="#1b222d" stroke-width="1"/>
-          <text x="342" y="23" font-size="11" fill="#00ff9d" font-weight="700">🚀 FLAGSHIP</text>
-          <text x="430" y="23" font-size="11" fill="#e6edf3">AgriSense AI &amp; analytics_shorts</text>
-        </g>
-      </g>
-
-      <!-- Live Command Prompt Bar -->
-      <g transform="translate(0, 264)" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" begin="1.5s" dur="0.4s" fill="freeze"/>
-        <text x="0" y="14" font-size="12" fill="#525e6e">$</text>
-        <text x="16" y="14" font-size="12" fill="#00f0ff" font-weight="600">active_mission:</text>
-        <text x="145" y="14" font-size="12" fill="#e6edf3">shipping local procedural engines on Apple Silicon M3</text>
-        
-        <!-- Blinking Terminal Cursor -->
-        <rect x="585" y="2" width="8" height="15" fill="#00ff9d" filter="url(#emeraldGlow)">
-          <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.4;0.5;0.9;1" dur="1s" begin="1.8s" repeatCount="indefinite"/>
-        </rect>
-      </g>
-
+    <!-- Animated dimension callout from [10] to bottom (measuring total system scope) -->
+    <g opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="0.6s" dur="0.4s" fill="freeze"/>
+      <!-- Vertical dimension line on left margin -->
+      <line x1="60" y1="120" x2="60" y2="380" stroke="#2c3e50" stroke-width="0.6"/>
+      <line x1="56" y1="120" x2="64" y2="120" stroke="#2c3e50" stroke-width="0.6"/>
+      <line x1="56" y1="380" x2="64" y2="380" stroke="#2c3e50" stroke-width="0.6"/>
+      <text x="58" y="254" text-anchor="middle" font-family="'Courier New',monospace" font-size="8" fill="#7a8a9a" transform="rotate(-90, 58, 254)">FULL SYSTEM SCOPE</text>
     </g>
 
-    <!-- Scanline & Vignette Overlay -->
-    <rect x="2" y="38" width="916" height="320" fill="url(#scanlines)"/>
   </g>
 </svg>
