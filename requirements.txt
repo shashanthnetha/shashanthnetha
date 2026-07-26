@@ -1,0 +1,8 @@
+# No external dependencies required.
+# This project uses standard Python 3 standard library modules only:
+# - urllib.request
+# - json
+# - datetime
+# - os
+# - sys
+# - xml.sax.saxutils

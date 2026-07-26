@@ -1,0 +1,71 @@
+<svg width="900" height="428" viewBox="0 0 900 428" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="live GitHub profile dashboard for shashanthnetha">
+  <defs>
+    <clipPath id="cardClip">
+      <rect x="1" y="1" width="898" height="426" rx="12"/>
+    </clipPath>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#ffffff" opacity="0.02"/>
+    </pattern>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <!-- Terminal window container -->
+    <rect x="1" y="1" width="898" height="426" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+
+    <!-- Title bar -->
+    <rect x="1" y="1" width="898" height="34" fill="#161b22"/>
+    <line x1="1" y1="35" x2="899" y2="35" stroke="#30363d" stroke-width="1"/>
+
+    <!-- Window controls -->
+    <circle cx="22" cy="18" r="5.5" fill="#f85149"/>
+    <circle cx="40" cy="18" r="5.5" fill="#d29922"/>
+    <circle cx="58" cy="18" r="5.5" fill="#3fb950"/>
+
+    <!-- Header title -->
+    <text x="450" y="22" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="12" fill="#6e7681">shashanthnetha — neofetch --github — live</text>
+
+    <!-- Matrix Glyph -->
+    <rect x="57" y="84" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="76" y="84" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="95" y="84" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="114" y="84" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="133" y="84" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="38" y="103" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="152" y="103" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="38" y="122" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="38" y="141" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="57" y="160" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="76" y="160" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="95" y="160" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="114" y="160" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="133" y="160" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="152" y="179" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="152" y="198" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="38" y="217" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="152" y="217" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="57" y="236" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="76" y="236" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="95" y="236" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="114" y="236" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+      <rect x="133" y="236" width="15" height="15" rx="3" fill="#3fb950" filter="url(#glow)"/>
+
+    <!-- Neofetch Key-Value Rows -->
+    <text x="220" y="74" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">user           </tspan><tspan fill="#c9d1d9">shashanthnetha (Pittala Shashanth)</tspan></text><text x="220" y="100" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">system         </tspan><tspan fill="#c9d1d9">macOS · Apple M3 · zsh</tspan></text><text x="220" y="126" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">member_since   </tspan><tspan fill="#c9d1d9">Jan 2025 (1 yr ago)</tspan></text><text x="220" y="152" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">network        </tspan><tspan fill="#c9d1d9">10 followers · 17 following</tspan></text><text x="220" y="178" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">repositories   </tspan><tspan fill="#c9d1d9">31 public · 50 ★ · 2 forks</tspan></text><text x="220" y="204" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">contributions  </tspan><tspan fill="#c9d1d9">syncing after first run...</tspan></text><text x="220" y="230" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">streak         </tspan><tspan fill="#c9d1d9">syncing after first run...</tspan></text><text x="220" y="256" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">activity       </tspan><tspan fill="#c9d1d9">active developer</tspan></text><text x="220" y="282" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">top_languages  </tspan><tspan fill="#c9d1d9">TypeScript, Python</tspan></text><text x="220" y="308" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">active_now     </tspan><tspan fill="#c9d1d9">shashanthnetha · &quot;syncing after first workflow run...&quot; · 12m ago</tspan></text><text x="220" y="334" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#3fb950" font-weight="600">last_updated   </tspan><tspan fill="#c9d1d9">2026-07-26 11:14 UTC</tspan></text>
+
+    <!-- Color Swatches Bar -->
+    <rect x="220" y="370" width="16" height="16" rx="3" fill="#f85149"/><rect x="244" y="370" width="16" height="16" rx="3" fill="#3fb950"/><rect x="268" y="370" width="16" height="16" rx="3" fill="#d29922"/><rect x="292" y="370" width="16" height="16" rx="3" fill="#58a6ff"/><rect x="316" y="370" width="16" height="16" rx="3" fill="#bc8cff"/><rect x="340" y="370" width="16" height="16" rx="3" fill="#39c5cf"/><rect x="364" y="370" width="16" height="16" rx="3" fill="#f778ba"/><rect x="388" y="370" width="16" height="16" rx="3" fill="#c9d1d9"/>
+
+    <!-- Footer caption -->
+    <text x="220" y="402" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#6e7681">regenerated daily via GitHub Actions · pure SVG + Python stdlib</text>
+
+    <!-- Scanline overlay -->
+    <rect x="1" y="35" width="898" height="392" fill="url(#scanlines)"/>
+  </g>
+</svg>

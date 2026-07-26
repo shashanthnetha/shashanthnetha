@@ -1,0 +1,39 @@
+name: refresh live dashboard
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # Runs daily at 03:17 UTC
+  workflow_dispatch:         # Manual trigger option in Actions tab
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_dashboard.py"
+      - ".github/workflows/dashboard.yml"
+
+jobs:
+  build:
+    name: Generate and Update Dashboard Card
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate assets/dashboard.svg from GitHub API
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_dashboard.py shashanthnetha
+
+      - name: Commit updated dashboard SVG
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(dashboard): auto-update live metrics [skip ci]"
+          file_pattern: assets/dashboard.svg
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
