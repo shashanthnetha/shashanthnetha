@@ -1,63 +1,162 @@
-<svg width="840" height="240" viewBox="0 0 840 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shashanth Netha — AI and Systems Engineer">
+<svg width="880" height="320" viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shashanth Netha — AI &amp; Systems Engineer Header">
   <defs>
-    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#e8a634" stop-opacity="0"/>
-      <stop offset="15%" stop-color="#e8a634" stop-opacity="1"/>
-      <stop offset="85%" stop-color="#e8a634" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#e8a634" stop-opacity="0"/>
+    <!-- Multi-color Mesh Gradient Orbs -->
+    <radialGradient id="orb1" cx="20%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="80%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb3" cx="50%" cy="90%" r="65%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Card Border Gradient -->
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0.8"/>
     </linearGradient>
-    <linearGradient id="subtleFade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#111111"/>
-      <stop offset="100%" stop-color="#0a0a0b"/>
+
+    <!-- Text Shimmer Gradient -->
+    <linearGradient id="textShimmer" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="30%" stop-color="#38BDF8"/>
+      <stop offset="60%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
+
+    <!-- Accent Line Gradient -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="80%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#F472B6" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Background Pattern -->
+    <pattern id="gridPattern" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.03"/>
+      <circle cx="32" cy="0" r="1.5" fill="#ffffff" fill-opacity="0.08"/>
+    </pattern>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
 
-  <!-- Card -->
-  <rect width="840" height="240" rx="12" fill="url(#subtleFade)"/>
-  <rect width="840" height="240" rx="12" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+  <style>
+    @keyframes textFlow {
+      0% { stop-color: #A78BFA; }
+      33% { stop-color: #38BDF8; }
+      66% { stop-color: #F472B6; }
+      100% { stop-color: #A78BFA; }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+    @keyframes floatOrb {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .main-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      letter-spacing: -1px;
+    }
+    .sub-title {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  </style>
 
-  <!-- Accent line — animates in from center -->
-  <line x1="60" y1="1" x2="780" y2="1" stroke="url(#accentLine)" stroke-width="2" stroke-dasharray="720" stroke-dashoffset="720">
-    <animate attributeName="stroke-dashoffset" from="720" to="0" dur="1.5s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
-  </line>
+  <!-- Background Base matching GitHub Dark (#0d1117) -->
+  <rect width="880" height="320" rx="16" fill="#0d1117"/>
+  
+  <!-- Glowing Gradient Orbs -->
+  <rect width="880" height="320" rx="16" fill="url(#orb1)"/>
+  <rect width="880" height="320" rx="16" fill="url(#orb2)"/>
+  <rect width="880" height="320" rx="16" fill="url(#orb3)"/>
+  
+  <!-- Subtle Grid overlay -->
+  <rect width="880" height="320" rx="16" fill="url(#gridPattern)"/>
 
-  <!-- Name -->
-  <text x="60" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="36" font-weight="700" fill="#ededed" letter-spacing="-0.5" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.2s" fill="freeze"/>
-    Shashanth Netha
-  </text>
+  <!-- Glassmorphism Card Frame -->
+  <rect x="20" y="20" width="840" height="280" rx="16" fill="#161b22" fill-opacity="0.65" stroke="url(#cardBorder)" stroke-width="1.5"/>
 
-  <!-- Role -->
-  <text x="60" y="108" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="400" fill="#737373" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.5s" fill="freeze"/>
-    AI &amp; Systems Engineer · Building local-first inference on Apple Silicon
-  </text>
-
-  <!-- Divider -->
-  <line x1="60" y1="132" x2="200" y2="132" stroke="#262626" stroke-width="1" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.7s" fill="freeze"/>
-  </line>
-
-  <!-- Details row -->
-  <g font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.9s" fill="freeze"/>
-
-    <text x="60" y="162" fill="#525252">CMRCET Hyderabad</text>
-    <circle cx="188" cy="158" r="1.5" fill="#404040"/>
-    <text x="198" y="162" fill="#525252">NxtWave CCBP 4.0</text>
+  <!-- Status Indicator Badge (Top Right) -->
+  <g transform="translate(600, 44)">
+    <rect width="230" height="30" rx="15" fill="#0d1117" fill-opacity="0.8" stroke="#30363d" stroke-width="1"/>
+    <circle cx="20" cy="15" r="4.5" fill="#10B981" filter="url(#glow)"/>
+    <circle cx="20" cy="15" r="4.5" fill="#10B981">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="34" y="19" class="badge-text" fill="#E2E8F0" letter-spacing="0.2">AVAILABLE FOR CREATIVE ROLES</text>
   </g>
 
-  <!-- Links row -->
-  <g font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="12" opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="1.1s" fill="freeze"/>
-
-    <text x="60" y="198" fill="#525252">portfolio</text>
-    <circle cx="120" cy="194" r="1.5" fill="#404040"/>
-    <text x="130" y="198" fill="#525252">linkedin</text>
-    <circle cx="186" cy="194" r="1.5" fill="#404040"/>
-    <text x="196" y="198" fill="#525252">github.com/shashanthnetha</text>
+  <!-- Left Content Area -->
+  <!-- Header Tag / Greeting -->
+  <g transform="translate(52, 60)">
+    <rect width="180" height="24" rx="12" fill="#8B5CF6" fill-opacity="0.15" stroke="#8B5CF6" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="14" y="16" class="sub-title" fill="#C4B5FD" font-size="12">👋 HI, I'M SHASHANTH</text>
   </g>
 
-  <!-- Subtle bottom fade line -->
-  <line x1="60" y1="220" x2="780" y2="220" stroke="#1a1a1a" stroke-width="0.5"/>
+  <!-- Main Name Title with Vibrant Gradient -->
+  <text x="52" y="124" class="main-title" fill="url(#textShimmer)" filter="url(#glow)">Shashanth Netha</text>
+
+  <!-- Subtitle / Role -->
+  <text x="52" y="156" class="sub-title" fill="#94A3B8">
+    <tspan fill="#38BDF8" font-weight="700">AI &amp; Systems Engineer</tspan> · Building Local-First Intelligence &amp; Autonomous Agents
+  </text>
+
+  <!-- Animated Divider Line -->
+  <line x1="52" y1="178" x2="828" y2="178" stroke="url(#lineGrad)" stroke-width="1.5"/>
+
+  <!-- Tech Focus & Skill Badges Row -->
+  <g transform="translate(52, 202)">
+    <!-- Pill 1: PyTorch & Vision -->
+    <g transform="translate(0, 0)">
+      <rect width="170" height="34" rx="8" fill="#1E1B4B" fill-opacity="0.6" stroke="#6366F1" stroke-width="1"/>
+      <text x="14" y="21" class="badge-text" fill="#A5B4FC">🔥 PyTorch &amp; Vision</text>
+    </g>
+
+    <!-- Pill 2: Multi-Agent Systems -->
+    <g transform="translate(182, 0)">
+      <rect width="175" height="34" rx="8" fill="#064E3B" fill-opacity="0.6" stroke="#10B981" stroke-width="1"/>
+      <text x="14" y="21" class="badge-text" fill="#6EE7B7">🤖 Multi-Agent Systems</text>
+    </g>
+
+    <!-- Pill 3: Apple Silicon MPS -->
+    <g transform="translate(369, 0)">
+      <rect width="175" height="34" rx="8" fill="#4C1D95" fill-opacity="0.6" stroke="#A855F7" stroke-width="1"/>
+      <text x="14" y="21" class="badge-text" fill="#E9D5FF">⚡ Apple Silicon MPS</text>
+    </g>
+
+    <!-- Pill 4: Full-Stack FastAPI/Next -->
+    <g transform="translate(556, 0)">
+      <rect width="220" height="34" rx="8" fill="#0369A1" fill-opacity="0.5" stroke="#38BDF8" stroke-width="1"/>
+      <text x="14" y="21" class="badge-text" fill="#BAE6FD">🚀 Next.js 14 · FastAPI · Docker</text>
+    </g>
+  </g>
+
+  <!-- Bottom Location & Education Bar -->
+  <g transform="translate(52, 262)">
+    <text x="0" y="0" class="sub-title" fill="#64748B" font-size="12">
+      📍 Hyderabad, India · 🎓 CMRCET B.Tech AI &amp; ML · ⚡ NxtWave CCBP 4.0 Fellow
+    </text>
+  </g>
 </svg>

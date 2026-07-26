@@ -1,42 +1,125 @@
-<svg width="840" height="424" viewBox="0 0 840 424" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub metrics for shashanthnetha">
+<svg width="880" height="360" viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live Telemetry Dashboard for shashanthnetha">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#111111"/>
-      <stop offset="100%" stop-color="#0a0a0b"/>
+    <linearGradient id="dbBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#e8a634" stop-opacity="0"/>
-      <stop offset="15%" stop-color="#e8a634"/>
-      <stop offset="85%" stop-color="#e8a634"/>
-      <stop offset="100%" stop-color="#e8a634" stop-opacity="0"/>
+
+    <linearGradient id="topBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="35%" stop-color="#38BDF8"/>
+      <stop offset="70%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#F472B6"/>
     </linearGradient>
+
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
 
-  <!-- Card -->
-  <rect width="840" height="424" rx="12" fill="url(#bg)"/>
-  <rect width="840" height="424" rx="12" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+  <!-- Container Base -->
+  <rect width="880" height="360" rx="16" fill="url(#dbBg)"/>
+  <rect width="880" height="360" rx="16" fill="none" stroke="#30363d" stroke-width="1"/>
 
-  <!-- Top accent -->
-  <line x1="60" y1="1" x2="780" y2="1" stroke="url(#accent)" stroke-width="2"/>
+  <!-- Glowing Top Border Accent -->
+  <path d="M 0 16 A 16 16 0 0 1 16 0 L 864 0 A 16 16 0 0 1 880 16" fill="none" stroke="url(#topBorder)" stroke-width="3"/>
 
-  <!-- Header -->
-  <text x="60" y="38" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#525252" letter-spacing="1.5">LIVE METRICS</text>
-  <text x="780" y="38" text-anchor="end" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#404040">Jul 26, 2026 · 11:50 UTC</text>
+  <!-- Header Row -->
+  <g transform="translate(52, 38)">
+    <circle cx="0" cy="0" r="5" fill="#10B981" filter="url(#glowGreen)"/>
+    <circle cx="0" cy="0" r="5" fill="#10B981"/>
+    <text x="14" y="4" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="12" font-weight="700" fill="#E2E8F0" letter-spacing="1">LIVE TELEMETRY &amp; METRICS ENGINE</text>
+    <text x="776" y="4" text-anchor="end" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#64748B">Verified: Jul 26, 2026 · 13:19 UTC</text>
+  </g>
 
-  <!-- Separator -->
-  <line x1="60" y1="50" x2="780" y2="50" stroke="#1a1a1a" stroke-width="1"/>
+  <!-- Divider Line -->
+  <line x1="52" y1="56" x2="828" y2="56" stroke="#21262d" stroke-width="1"/>
 
-  <!-- Metrics grid -->
-  <text x="60" y="70" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">REPOSITORIES</text><text x="60" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">29</text><text x="320" y="70" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">STARS</text><text x="320" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">48</text><text x="580" y="70" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">FORKS</text><text x="580" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">2</text><text x="60" y="142" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">CONTRIBUTIONS</text><text x="60" y="166" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">143</text><text x="320" y="142" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">COMMITS</text><text x="320" y="166" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">111</text><text x="580" y="142" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">STREAK</text><text x="580" y="166" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">2d</text><text x="60" y="214" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">PULL REQUESTS</text><text x="60" y="238" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">0</text><text x="320" y="214" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">ISSUES</text><text x="320" y="238" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">1</text><text x="580" y="214" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">LONGEST STREAK</text><text x="580" y="238" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">2d</text><text x="60" y="286" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">FOLLOWERS</text><text x="60" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">10</text><text x="320" y="286" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">FOLLOWING</text><text x="320" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#ededed">17</text><text x="580" y="286" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">LANGUAGES</text><text x="580" y="308" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" font-weight="600" fill="#ededed">TypeScript, Python, JavaScript</text>
+  <!-- 4 Stat Block Cards Grid (Row 1) -->
+  <!-- Block 1: Codebase & Repos (Purple) -->
+  <g transform="translate(52, 72)">
+    <rect width="180" height="135" rx="12" fill="url(#cardGrad1)" stroke="#8B5CF6" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="700" fill="#C4B5FD" letter-spacing="0.5">CODEBASE SCOPE</text>
+    <text x="16" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="28" font-weight="800" fill="#F3E8FF">31</text>
+    <text x="16" y="78" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" fill="#94A3B8">Public Repositories</text>
+    <line x1="16" y1="92" x2="164" y2="92" stroke="#8B5CF6" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="16" y="114" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#DDD6FE">⭐ 51 stars · 🍴 2 forks</text>
+  </g>
 
-  <!-- Separator before active section -->
-  <line x1="60" y1="352" x2="780" y2="352" stroke="#1a1a1a" stroke-width="1"/>
+  <!-- Block 2: Development Velocity (Amber) -->
+  <g transform="translate(248, 72)">
+    <rect width="180" height="135" rx="12" fill="url(#cardGrad2)" stroke="#F59E0B" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="700" fill="#FDE68A" letter-spacing="0.5">DEV VELOCITY</text>
+    <text x="16" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="28" font-weight="800" fill="#FEF3C7">142</text>
+    <text x="16" y="78" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" fill="#94A3B8">Yearly Contributions</text>
+    <line x1="16" y1="92" x2="164" y2="92" stroke="#F59E0B" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="16" y="114" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#FDE68A">💻 118 total commits</text>
+  </g>
 
-  <!-- Currently active -->
-  <text x="60" y="372" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="500" fill="#525252" letter-spacing="1.5">LATEST ACTIVITY</text>
-  <text x="60" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#e8a634">shashanthnetha</text>
-  <text x="60" y="414" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="12" fill="#525252">&quot;remove IIT Hyderabad mention, fix lan...&quot; · 1m ago</text>
+  <!-- Block 3: Consistency & Streaks (Emerald) -->
+  <g transform="translate(444, 72)">
+    <rect width="180" height="135" rx="12" fill="url(#cardGrad3)" stroke="#10B981" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="700" fill="#A7F3D0" letter-spacing="0.5">CONSISTENCY</text>
+    <text x="16" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="28" font-weight="800" fill="#ECFDF5">5d</text>
+    <text x="16" y="78" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" fill="#94A3B8">Current Streak 🔥</text>
+    <line x1="16" y1="92" x2="164" y2="92" stroke="#10B981" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="16" y="114" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#A7F3D0">🏆 Best: 14d streak</text>
+  </g>
 
-  <!-- Footer line -->
-  <line x1="60" y1="418" x2="780" y2="418" stroke="#1a1a1a" stroke-width="0.5"/>
+  <!-- Block 4: Open Source Activity (Sky Blue) -->
+  <g transform="translate(640, 72)">
+    <rect width="188" height="135" rx="12" fill="url(#cardGrad4)" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="700" fill="#BAE6FD" letter-spacing="0.5">OPEN SOURCE</text>
+    <text x="16" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="28" font-weight="800" fill="#E0F2FE">12</text>
+    <text x="16" y="78" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" fill="#94A3B8">Pull Requests Opened</text>
+    <line x1="16" y1="92" x2="172" y2="92" stroke="#38BDF8" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="16" y="114" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#BAE6FD">👥 10 followers · 4 issues</text>
+  </g>
+
+  <!-- Row 2: Top Languages Progress Bar -->
+  <g transform="translate(52, 224)">
+    <text x="0" y="0" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="700" fill="#94A3B8" letter-spacing="0.5">MOST USED LANGUAGES</text>
+  </g>
+
+  <!-- Progress Bar Base Container -->
+  <rect x="52" y="242" width="776" height="10" rx="5" fill="#21262d"/>
+  <g clip-path="url(#barClip)">
+    <clipPath id="barClip">
+      <rect x="52" y="242" width="776" height="10" rx="5"/>
+    </clipPath>
+    <rect x="52" y="242" width="355.40799999999996" height="10" fill="#3178C6" opacity="0.9"/><rect x="407.40799999999996" y="242" width="226.59199999999998" height="10" fill="#3572A5" opacity="0.9"/><rect x="634.0" y="242" width="64.408" height="10" fill="#F7DF1E" opacity="0.9"/><rect x="698.408" y="242" width="64.408" height="10" fill="#8B5CF6" opacity="0.9"/><rect x="762.816" y="242" width="32.592" height="10" fill="#563D7C" opacity="0.9"/>
+  </g>
+
+  <!-- Language Legend Below Bar -->
+  <g transform="translate(52, 268)"><g><circle cx="0" cy="0" r="4" fill="#3178C6"/><text x="10" y="4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">TypeScript <tspan fill="#64748B" font-weight="400">(45.8%)</tspan></text></g></g><g transform="translate(202, 268)"><g><circle cx="0" cy="0" r="4" fill="#3572A5"/><text x="10" y="4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">Python <tspan fill="#64748B" font-weight="400">(29.2%)</tspan></text></g></g><g transform="translate(352, 268)"><g><circle cx="0" cy="0" r="4" fill="#F7DF1E"/><text x="10" y="4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">JavaScript <tspan fill="#64748B" font-weight="400">(8.3%)</tspan></text></g></g><g transform="translate(502, 268)"><g><circle cx="0" cy="0" r="4" fill="#8B5CF6"/><text x="10" y="4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">Kotlin <tspan fill="#64748B" font-weight="400">(8.3%)</tspan></text></g></g><g transform="translate(652, 268)"><g><circle cx="0" cy="0" r="4" fill="#563D7C"/><text x="10" y="4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#E2E8F0">CSS <tspan fill="#64748B" font-weight="400">(4.2%)</tspan></text></g></g>
+
+  <!-- Row 3: Latest Commit Dispatch Line (Bottom) -->
+  <line x1="52" y1="304" x2="828" y2="304" stroke="#21262d" stroke-width="1"/>
+  <g transform="translate(52, 328)">
+    <circle cx="0" cy="0" r="4" fill="#38BDF8"/>
+    <text x="12" y="4" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#64748B">
+      LATEST DISPATCH: <tspan fill="#38BDF8" font-weight="600">shashanthnetha</tspan> <tspan fill="#94A3B8">"Updated codebase &amp; system configuration"</tspan> <tspan fill="#64748B">(1h ago)</tspan>
+    </text>
+  </g>
 </svg>
