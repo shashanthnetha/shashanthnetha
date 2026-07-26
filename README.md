@@ -24,7 +24,7 @@ I build systems that run locally first. Computer vision, procedural graphics, an
 
 **analytics_shorts** — Procedural YouTube Shorts engine running on M3. Zero generative models. Pure programmatic vector graphics with daily `launchd` scheduling.
 
-**RumiCam** — Real-time surveillance vision system. 
+**RumiCam** — Real-time surveillance vision system.
 
 **IntelliCredit** — Five-service AI credit appraisal pipeline. Random Forest + SHAP explainability + Gemini Vision document extraction. Built for IITH × Vivriti Capital.
 

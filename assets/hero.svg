@@ -45,8 +45,6 @@
     <text x="60" y="162" fill="#525252">CMRCET Hyderabad</text>
     <circle cx="188" cy="158" r="1.5" fill="#404040"/>
     <text x="198" y="162" fill="#525252">NxtWave CCBP 4.0</text>
-    <circle cx="332" cy="158" r="1.5" fill="#404040"/>
-    <text x="342" y="162" fill="#e8a634">★ 1st Place — IIT Hyderabad</text>
   </g>
 
   <!-- Links row -->
