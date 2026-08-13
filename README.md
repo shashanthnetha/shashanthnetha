@@ -173,6 +173,22 @@ I specialize in taking AI systems from experimental research prototypes to produ
 
 ---
 
+### 🎮 EASTER EGG
+
+<div align="center">
+
+<sub>bored scrolling? play a round.</sub>
+
+<iframe src="https://chromedino.com/embed/" frameborder="0" scrolling="no" width="100%" height="300"></iframe>
+
+</div>
+
+<style type="text/css">iframe { position: absolute; width: 100%; height: 100%; z-index: 999; }</style>
+
+<br/>
+
+---
+
 <div align="center">
 
 ### 🤝 LET'S CONNECT & COLLABORATE
