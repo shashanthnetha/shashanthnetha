@@ -224,21 +224,14 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 
 ---
 
-## 🎮 EASTER EGG
+#  Contribution Snake
 
-<div align="center">
-
-<sub>bored scrolling? play a round.</sub>
-
-<br/><br/>
-
-<a href="https://chromedino.com/" target="_blank">
-  🦖 <strong>PLAY CHROME DINO</strong> 🦖
-</a>
-
-</div>
-
-<br/>
+<p align="center">
+  <img 
+    src="https://raw.githubusercontent.com/sudeepmukul/sudeepmukul/output/github-contribution-grid-snake-dark.svg"
+    alt="Snake animation"
+  />
+</p>
 
 ---
 
