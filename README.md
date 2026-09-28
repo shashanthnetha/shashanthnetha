@@ -228,23 +228,18 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 <div align="center">
 
 <img
-  src="https://github-readme-stats.vercel.app/api?username=shashanthnetha&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=8b5cf6&icon_color=38bdf8&text_color=94a3b8"
-  height="165"
+  src="https://github-readme-stats.vercel.app/api?username=shashanthnetha&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=8b5cf6&icon_color=38bdf8&text_color=94a3b8&cache_seconds=86400"
+  height="180"
   alt="Shashanth's GitHub Stats"
 />
 
 <img
-  src="https://github-readme-stats.vercel.app/api/top-langs/?username=shashanthnetha&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=8b5cf6&text_color=94a3b8"
-  height="165"
+  src="https://github-readme-stats.vercel.app/api/top-langs/?username=shashanthnetha&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=8b5cf6&text_color=94a3b8&cache_seconds=86400"
+  height="180"
   alt="Shashanth's Top Languages"
 />
 
 </div>
-
-<br/>
-
----
-
 ## 👾 PAC-MAN CONTRIBUTIONS
 
 <div align="center">
