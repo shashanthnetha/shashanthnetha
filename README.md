@@ -1,14 +1,8 @@
 <div align="center">
 
 <picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="dark_mode.svg"
-  />
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="light_mode.svg"
-  />
+  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
   <img
     src="dark_mode.svg"
     alt="Shashanth Netha's GitHub profile"
@@ -19,30 +13,18 @@
 <br/><br/>
 
 <a href="https://portfolio-backend-lilac-mu.vercel.app/">
-  <img
-    src="https://img.shields.io/badge/🌐_Portfolio-shashanth.dev-8B5CF6?style=for-the-badge&logoColor=white"
-    alt="Portfolio"
-  />
+  <img src="https://img.shields.io/badge/🌐_Portfolio-shashanth.dev-8B5CF6?style=for-the-badge&logoColor=white" alt="Portfolio" />
 </a>
 
 <a href="https://linkedin.com/in/shashanth-pittala">
-  <img
-    src="https://img.shields.io/badge/LinkedIn-shashanth--pittala-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-    alt="LinkedIn"
-  />
+  <img src="https://img.shields.io/badge/LinkedIn-shashanth--pittala-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
 </a>
 
 <a href="https://github.com/shashanthnetha">
-  <img
-    src="https://img.shields.io/badge/GitHub-shashanthnetha-181717?style=for-the-badge&logo=github&logoColor=white"
-    alt="GitHub"
-  />
+  <img src="https://img.shields.io/badge/GitHub-shashanthnetha-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 </a>
 
-<img
-  src="https://img.shields.io/badge/Location-Hyderabad%2C_India-10B981?style=for-the-badge&logo=google-maps&logoColor=white"
-  alt="Location"
-/>
+<img src="https://img.shields.io/badge/Location-Hyderabad%2C_India-10B981?style=for-the-badge&logo=google-maps&logoColor=white" alt="Location" />
 
 </div>
 
@@ -55,8 +37,6 @@
 I'm **Sha (Shashanth Netha)** — an **AI & Systems Engineer** passionate about **local-first AI inference**, **multi-agent architectures**, **computer vision**, and **high-performance automation**.
 
 I specialize in taking AI systems from experimental research prototypes to production-grade, low-latency deployments. Most of my inference and procedural pipelines execute locally on **Apple Silicon M3 using MPS/Metal** before touching the cloud.
-
-<br/>
 
 ---
 
@@ -73,9 +53,7 @@ I specialize in taking AI systems from experimental research prototypes to produ
 </div>
 
 <p align="center">
-  <sub>
-    ⚡ Telemetry metrics are automatically updated via GitHub Actions &amp; GraphQL API with zero third-party service dependencies.
-  </sub>
+  <sub>⚡ Telemetry metrics are automatically updated via GitHub Actions &amp; GraphQL API with zero third-party service dependencies.</sub>
 </p>
 
 <br/>
@@ -86,7 +64,6 @@ I specialize in taking AI systems from experimental research prototypes to produ
 
 <table width="100%">
   <tr>
-
     <td width="50%" valign="top">
 
 ### 🌾 AgriSense AI
@@ -96,15 +73,15 @@ I specialize in taking AI systems from experimental research prototypes to produ
 Rebuilt from a hackathon prototype into a full-stack production platform. Features **Gemini 2.0 Flash Vision** for multimodal leaf diagnosis, **ChromaDB RAG** with a 50+ disease knowledge base, and **gTTS** voice synthesis for local-language accessibility.
 
 <p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Gemini_2.0-8E75B2?style=flat-square&logo=google&logoColor=white" />
-  <img src="https://img.shields.io/badge/ChromaDB-FF6F00?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/Gemini_2.0-8E75B2?style=flat-square&logo=google&logoColor=white" />
+<img src="https://img.shields.io/badge/ChromaDB-FF6F00?style=flat-square&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
 </p>
 
-    </td>
+</td>
 
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
 
 ### 🎬 analytics_shorts
 
@@ -113,18 +90,16 @@ Rebuilt from a hackathon prototype into a full-stack production platform. Featur
 High-throughput YouTube Shorts generation pipeline running on **Apple Silicon M3**. Replaces slow generative AI video models with deterministic programmatic **SVG/Canvas vector graphics**, YouTube analytics integration, and daily `launchd` automation.
 
 <p>
-  <img src="https://img.shields.io/badge/Apple_M3_MPS-999999?style=flat-square&logo=apple&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/SVG%2FCanvas-E34F26?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/macOS_launchd-000000?style=flat-square&logo=apple&logoColor=white" />
+<img src="https://img.shields.io/badge/Apple_M3_MPS-999999?style=flat-square&logo=apple&logoColor=white" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/SVG%2FCanvas-E34F26?style=flat-square&logoColor=white" />
+<img src="https://img.shields.io/badge/macOS_launchd-000000?style=flat-square&logo=apple&logoColor=white" />
 </p>
 
-    </td>
-
+</td>
   </tr>
 
   <tr>
-
     <td width="50%" valign="top">
 
 ### 👁️ RumiCam
@@ -134,14 +109,14 @@ High-throughput YouTube Shorts generation pipeline running on **Apple Silicon M3
 Low-latency computer vision anomaly detection and video stream analytics platform. Implements **PyTorch spatial-temporal models** and **OpenCV object tracking** optimized for resource-constrained edge hardware.
 
 <p>
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" />
-  <img src="https://img.shields.io/badge/VGG16%2BLSTM-00599C?style=flat-square&logoColor=white" />
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" />
+<img src="https://img.shields.io/badge/VGG16%2BLSTM-00599C?style=flat-square&logoColor=white" />
 </p>
 
-    </td>
+</td>
 
-    <td width="50%" valign="top">
+<td width="50%" valign="top">
 
 ### 💳 IntelliCredit
 
@@ -150,17 +125,15 @@ Low-latency computer vision anomaly detection and video stream analytics platfor
 Built for the **IITH × Vivriti Capital** challenge. Integrates **Gemini Vision OCR** document extraction, **Random Forest** credit scoring with **SHAP explainability**, and multi-stage decisioning workflows.
 
 <p>
-  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" />
-  <img src="https://img.shields.io/badge/SHAP-008080?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/Gemini_API-8E75B2?style=flat-square&logo=google&logoColor=white" />
+<img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" />
+<img src="https://img.shields.io/badge/SHAP-008080?style=flat-square&logoColor=white" />
+<img src="https://img.shields.io/badge/Gemini_API-8E75B2?style=flat-square&logo=google&logoColor=white" />
 </p>
 
-    </td>
-
+</td>
   </tr>
 
   <tr>
-
     <td colspan="2" valign="top">
 
 ### ⚖️ courtroom-env
@@ -170,14 +143,13 @@ Built for the **IITH × Vivriti Capital** challenge. Integrates **Gemini Vision 
 An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning, evidence synthesis, and structured debate. Achieves a **0.9667 baseline accuracy** across benchmark scenarios.
 
 <p>
-  <img src="https://img.shields.io/badge/Multi--Agent-8B5CF6?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenEnv-000000?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/Multi--Agent-8B5CF6?style=flat-square&logoColor=white" />
+<img src="https://img.shields.io/badge/OpenEnv-000000?style=flat-square&logoColor=white" />
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
 </p>
 
-    </td>
-
+</td>
   </tr>
 </table>
 
@@ -189,7 +161,6 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 
 <table width="100%">
   <tr>
-
     <td width="25%" valign="top">
 
 ### 🧠 AI & ML
@@ -201,9 +172,9 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 - OpenCV · DETR · YOLO
 - gTTS Speech Processing
 
-    </td>
+</td>
 
-    <td width="25%" valign="top">
+<td width="25%" valign="top">
 
 ### 💻 Full-Stack Web
 
@@ -214,9 +185,9 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 - Firebase Auth / Firestore
 - REST & GraphQL APIs
 
-    </td>
+</td>
 
-    <td width="25%" valign="top">
+<td width="25%" valign="top">
 
 ### ⚡ Systems & Automation
 
@@ -227,9 +198,9 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 - GitHub Actions CI/CD
 - Chrome Extensions (MV3)
 
-    </td>
+</td>
 
-    <td width="25%" valign="top">
+<td width="25%" valign="top">
 
 ### 📊 Databases & Cloud
 
@@ -240,8 +211,7 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 - Google Cloud Platform
 - Git & Version Control
 
-    </td>
-
+</td>
   </tr>
 </table>
 
@@ -255,15 +225,13 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 
 <img
   src="https://github-readme-stats.vercel.app/api?username=shashanthnetha&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=8b5cf6&icon_color=38bdf8&text_color=94a3b8&cache_seconds=86400"
-  height="180"
+  height="165"
   alt="Shashanth's GitHub Stats"
 />
 
-&nbsp;&nbsp;&nbsp;
-
 <img
   src="https://github-readme-stats.vercel.app/api/top-langs/?username=shashanthnetha&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=8b5cf6&text_color=94a3b8&cache_seconds=86400"
-  height="180"
+  height="165"
   alt="Shashanth's Top Languages"
 />
 
@@ -282,18 +250,15 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
     media="(prefers-color-scheme: dark)"
     srcset="https://raw.githubusercontent.com/shashanthnetha/shashanthnetha/output/pacman-contribution-graph-dark.svg"
   />
-
   <source
     media="(prefers-color-scheme: light)"
     srcset="https://raw.githubusercontent.com/shashanthnetha/shashanthnetha/output/pacman-contribution-graph.svg"
   />
-
   <img
     src="https://raw.githubusercontent.com/shashanthnetha/shashanthnetha/output/pacman-contribution-graph.svg"
     alt="Pac-Man contribution graph"
     width="100%"
   />
-
 </picture>
 
 </div>
@@ -307,12 +272,10 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 ## 🤝 LET'S CONNECT & COLLABORATE
 
 <p>
-  Whether you want to discuss multi-agent AI architectures,
-  local inference on Apple Silicon, or collaboration opportunities —
-  feel free to reach out!
+Whether you want to discuss multi-agent AI architectures,
+local inference on Apple Silicon, or collaboration opportunities —
+feel free to reach out!
 </p>
-
-<br/>
 
 <a href="https://portfolio-backend-lilac-mu.vercel.app/">
   <img
@@ -337,8 +300,6 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 
 <br/><br/>
 
-<sub>
-  Crafted with passion, local Python automation, &amp; Apple Silicon M3.
-</sub>
+<sub>Crafted with passion, local Python automation, &amp; Apple Silicon M3.</sub>
 
 </div>
