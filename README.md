@@ -3,15 +3,28 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg" />
   <source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
-  <img alt="Shashanth Netha's GitHub profile" src="dark_mode.svg" width="100%" />
+  <img
+    src="dark_mode.svg"
+    alt="Shashanth Netha's GitHub profile"
+    width="100%"
+  />
 </picture>
 
 <br/><br/>
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-shashanth.dev-8B5CF6?style=for-the-badge&logoColor=white)](https://portfolio-backend-lilac-mu.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-shashanth--pittala-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/shashanth-pittala)
-[![GitHub](https://img.shields.io/badge/GitHub-shashanthnetha-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/shashanthnetha)
-[![Location](https://img.shields.io/badge/Location-Hyderabad%2C_India-10B981?style=for-the-badge&logo=google-maps&logoColor=white)](#)
+<a href="https://portfolio-backend-lilac-mu.vercel.app/">
+  <img src="https://img.shields.io/badge/🌐_Portfolio-shashanth.dev-8B5CF6?style=for-the-badge&logoColor=white" alt="Portfolio" />
+</a>
+
+<a href="https://linkedin.com/in/shashanth-pittala">
+  <img src="https://img.shields.io/badge/LinkedIn-shashanth--pittala-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+
+<a href="https://github.com/shashanthnetha">
+  <img src="https://img.shields.io/badge/GitHub-shashanthnetha-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+
+<img src="https://img.shields.io/badge/Location-Hyderabad%2C_India-10B981?style=for-the-badge&logo=google-maps&logoColor=white" alt="Location" />
 
 </div>
 
@@ -31,12 +44,18 @@ I specialize in taking AI systems from experimental research prototypes to produ
 
 <div align="center">
 
-<img src="assets/dashboard.svg" width="100%" alt="Live Telemetry & Metrics Engine" />
+<img
+  src="assets/dashboard.svg"
+  width="100%"
+  alt="Live Telemetry & Metrics Engine"
+/>
 
 </div>
 
 <p align="center">
-  <sub>⚡ Telemetry metrics are automatically updated via GitHub Actions &amp; GraphQL API with zero third-party service dependencies.</sub>
+  <sub>
+    ⚡ Telemetry metrics are automatically updated via GitHub Actions &amp; GraphQL API with zero third-party service dependencies.
+  </sub>
 </p>
 
 <br/>
@@ -80,10 +99,10 @@ High-throughput YouTube Shorts generation pipeline running on **Apple Silicon M3
 </p>
 
 </td>
-  </tr>
+</tr>
 
-  <tr>
-    <td width="50%" valign="top">
+<tr>
+<td width="50%" valign="top">
 
 ### 👁️ RumiCam
 
@@ -114,10 +133,10 @@ Built for the **IITH × Vivriti Capital** challenge. Integrates **Gemini Vision 
 </p>
 
 </td>
-  </tr>
+</tr>
 
-  <tr>
-    <td colspan="2" valign="top">
+<tr>
+<td colspan="2" valign="top">
 
 ### ⚖️ courtroom-env
 
@@ -133,7 +152,7 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 </p>
 
 </td>
-  </tr>
+</tr>
 </table>
 
 <br/>
@@ -143,8 +162,9 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 ## 🛠️ TECHNICAL ARSENAL
 
 <table width="100%">
-  <tr>
-    <td width="25%" valign="top">
+<tr>
+
+<td width="25%" valign="top">
 
 ### 🧠 AI & ML
 
@@ -195,7 +215,8 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 - Git & Version Control
 
 </td>
-  </tr>
+
+</tr>
 </table>
 
 <br/>
@@ -224,6 +245,10 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 
 ---
 
+## 👾 PAC-MAN CONTRIBUTIONS
+
+<div align="center">
+
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
@@ -234,10 +259,17 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
     srcset="https://raw.githubusercontent.com/shashanthnetha/shashanthnetha/output/pacman-contribution-graph.svg"
   />
   <img
-    alt="Pac-Man contribution graph"
     src="https://raw.githubusercontent.com/shashanthnetha/shashanthnetha/output/pacman-contribution-graph.svg"
+    alt="Pac-Man contribution graph"
+    width="100%"
   />
 </picture>
+
+</div>
+
+<br/>
+
+---
 
 <div align="center">
 
@@ -250,19 +282,30 @@ feel free to reach out!
 </p>
 
 <a href="https://portfolio-backend-lilac-mu.vercel.app/">
-  <img src="https://img.shields.io/badge/Portfolio-8B5CF6?style=for-the-badge&logo=react&logoColor=white" alt="Portfolio" />
+  <img
+    src="https://img.shields.io/badge/Portfolio-8B5CF6?style=for-the-badge&logo=react&logoColor=white"
+    alt="Portfolio"
+  />
 </a>
 
 <a href="https://linkedin.com/in/shashanth-pittala">
-  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <img
+    src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+    alt="LinkedIn"
+  />
 </a>
 
 <a href="https://github.com/shashanthnetha">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <img
+    src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+    alt="GitHub"
+  />
 </a>
 
 <br/><br/>
 
-<sub>Crafted with passion, local Python automation, &amp; Apple Silicon M3.</sub>
+<sub>
+  Crafted with passion, local Python automation, &amp; Apple Silicon M3.
+</sub>
 
 </div>
