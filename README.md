@@ -224,16 +224,20 @@ An **OpenEnv-compliant agentic sandbox** for testing multi-agent legal reasoning
 
 ---
 
-#  Contribution Snake
-
-<p align="center">
-  <img 
-    src="https://raw.githubusercontent.com/sudeepmukul/sudeepmukul/output/github-contribution-grid-snake-dark.svg"
-    alt="Snake animation"
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/shashanthnetha/shashanthnetha/output/pacman-contribution-graph-dark.svg"
   />
-</p>
-
----
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/shashanthnetha/shashanthnetha/output/pacman-contribution-graph.svg"
+  />
+  <img
+    alt="Pac-Man contribution graph"
+    src="https://raw.githubusercontent.com/shashanthnetha/shashanthnetha/output/pacman-contribution-graph.svg"
+  />
+</picture>
 
 <div align="center">
 
